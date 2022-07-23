@@ -1,0 +1,18 @@
+@import "./_variables//mixins";
+@import "./_variables/variables";
+
+.Header__Container {
+  background-color: $white-tint;
+  background: linear-gradient(90deg, $white-tint 65%, $primary-color 0%);
+  background-size: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    background: linear-gradient(90deg, $white-tint 84%, $primary-color 0%);
+  }
+}
+
+.Layout__constraint {
+  @include Constraints;
+}

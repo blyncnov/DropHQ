@@ -1,0 +1,52 @@
+@import "./_variables/mixins";
+@import "./_variables/variables";
+
+.Hero__Container {
+  padding: 20px 0 40px 0;
+}
+
+.Hero__Container--Text {
+  width: 100%;
+  max-width: 60%;
+
+  @media (max-width: 768px) {
+    max-width: 85%;
+  }
+
+  .Hero__Greet {
+    font-size: clamp(2rem, 1vw, 30px);
+    border: 1px solid rgb(213, 145, 20);
+    padding: 0.1em 0.5em 0.1em 0;
+    border-radius: 30% 70% 44% 56% / 50% 70% 83% 50%;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 1vw, 40px);
+    text-transform: capitalize;
+    background: linear-gradient(110deg, red, green, orange, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    span {
+      color: $primary-color-light;
+      display: block;
+    }
+  }
+
+  p {
+    font-size: clamp(1.2rem, 1vw, 2rem);
+    margin: 1em 0;
+    opacity: 0.8;
+    color: $primary-color-dark;
+    line-height: 1.5;
+  }
+
+  button {
+    @include Button;
+    padding: 0 16px;
+    background-color: $primary-color-light;
+    color: white;
+    height: 40px;
+  }
+}

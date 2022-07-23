@@ -1,0 +1,27 @@
+@mixin Constraints {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@mixin Flex {
+  display: flex;
+
+  align-items: center;
+}
+
+@mixin Button {
+  background-color: #fffafc;
+  color: black;
+  outline: none;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  padding: 0 12px;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+}
