@@ -6,21 +6,16 @@ export const Navigation__Data = [
   },
   {
     id: 2,
-    name: "Therapy",
-    link: "/therapy",
+    name: "Exclusive Deals",
+    link: "/deals",
   },
   {
     id: 3,
-    name: "Advantages",
-    link: "/advantages",
+    name: "Locate",
+    link: "/locate",
   },
   {
     id: 4,
-    name: "Feedback",
-    link: "/feedback",
-  },
-  {
-    id: 5,
     name: "Contacts",
     link: "/contacts",
   },

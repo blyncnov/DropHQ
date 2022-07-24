@@ -3,11 +3,11 @@
 This is a Fullstack Application Webapp, created by Taiwo Boluwatife [`Blyncnov`](https://blyncnov.com/).
 
 ```bash
-npm run dev
+welcome to earth
 # or
-yarn dev
+dropHQ
 ```
 
-## Learn More Later
+## Learn More dropHQ
 
 This `Project` is currently under development .

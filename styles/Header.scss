@@ -3,14 +3,12 @@
 
 .Header__Container {
   background-color: $white-tint;
-  background: linear-gradient(90deg, $white-tint 65%, $primary-color 0%);
-  background-size: 100%;
+  background: url(../public/assets/images/home-1.jpeg);
+  // background: linear-gradient(90deg, $white-tint 65%, $primary-color 0%);
+  background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-
-  @media (max-width: 768px) {
-    background: linear-gradient(90deg, $white-tint 84%, $primary-color 0%);
-  }
+  object-fit: cover;
 }
 
 .Layout__constraint {

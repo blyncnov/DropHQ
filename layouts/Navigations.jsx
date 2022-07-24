@@ -19,7 +19,7 @@ const Navigations = () => {
           <div className="Left-Navigation">
             <Link href="/">
               <a>
-                <h1>GrubieMental</h1>
+                <h1>DropHQ</h1>
               </a>
             </Link>
           </div>
@@ -33,19 +33,19 @@ const Navigations = () => {
                 return (
                   <Link href={li.link} key={li.id}>
                     <a>
-                      <li>{li.name}</li>
+                      <li style={{ fontWeight: "600" }}>{li.name}</li>
                     </a>
                   </Link>
                 );
               })}
             </ul>
-            <button>Login</button>
+            <button>Download App</button>
           </div>
           <div className="Navigation__Mobile" onClick={handleClickToggle}>
             {isClicked ? (
-              <FaTimes style={{ fontSize: "1.8em", color: "#ffffff" }} />
+              <FaTimes style={{ fontSize: "1.8em", color: "black" }} />
             ) : (
-              <FaBars style={{ fontSize: "1.8em", color: "#ffffff" }} />
+              <FaBars style={{ fontSize: "1.8em", color: "black" }} />
             )}
           </div>
         </nav>
