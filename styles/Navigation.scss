@@ -18,7 +18,7 @@ nav,
 
 nav {
   position: relative;
-  padding: 1em 0;
+  padding: 1.1em 0;
 
   .Left-Navigation {
     h1 {
@@ -54,7 +54,7 @@ nav {
   }
 
   @media (max-width: 768px) {
-    width: 50%;
+    width: 60%;
     display: block !important;
     background: white;
     background-size: cover;

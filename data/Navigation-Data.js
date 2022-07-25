@@ -11,8 +11,8 @@ export const Navigation__Data = [
   },
   {
     id: 3,
-    name: "Locate",
-    link: "/locate",
+    name: "Location",
+    link: "/location",
   },
   {
     id: 4,
