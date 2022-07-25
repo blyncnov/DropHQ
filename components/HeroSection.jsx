@@ -7,12 +7,11 @@ const HeroSection = () => {
         <div className="Hero__Container">
           <div className="Hero__Container">
             <div className="Hero__Container--Text">
-              {/* <span className="Hero__Greet">Hello</span> */}
               <h1>Restaurants and more, delivered to your door.</h1>
               <p>
-                Psychology is a branch of medicine that studies the mental state
-                of mind and behaviour .it includes the study of conscious and
-                unconscious phenomena , as well as the feelings and thought.
+                Great food makes people think of big family dinners. So you may
+                want to position your restaurant as a place to bring the whole
+                family.
               </p>
               <button className="btn">Find Restaurants</button>
             </div>

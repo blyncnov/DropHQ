@@ -23,7 +23,7 @@ nav {
   .Left-Navigation {
     h1 {
       font-family: "Montserrat", sans-serif;
-      color: $primary-color-light;
+      color: white;
     }
   }
 }
@@ -35,6 +35,11 @@ nav {
 }
 
 .Right-Navigation {
+  .Navigation__li {
+    font-weight: 600;
+    color: white;
+  }
+
   button {
     @include Button;
     padding: 0.8125rem 1.5625rem;
@@ -42,7 +47,8 @@ nav {
     @media (max-width: 768px) {
       margin: 0 2em;
       color: white;
-      background-color: $primary-color-light;
+      width: calc(100% - 4em);
+      background-color: black;
       padding: 0.8125rem 1.5625rem;
     }
   }
@@ -50,13 +56,12 @@ nav {
   @media (max-width: 768px) {
     width: 50%;
     display: block !important;
-    background: url(../public/assets/images/home-1.jpeg);
-    // background: linear-gradient(90deg, $white-tint 65%, $primary-color 0%);
+    background: white;
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
     object-fit: cover;
-    border-radius: 0px 10px 10px 0;
+    border-radius: 0;
     position: fixed;
     top: 0;
     left: -100%;
@@ -70,10 +75,20 @@ nav {
     .Navigation__List {
       display: block;
 
+      .Navigation__li {
+        font-weight: 600;
+        color: green;
+      }
+
       li {
         display: block;
         border-bottom: 1px solid #f3f3f2;
         margin: 1.5em 2em;
+      }
+
+      .Navigation__li {
+        font-weight: 600;
+        color: black;
       }
     }
   }

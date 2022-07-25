@@ -33,7 +33,7 @@ const Navigations = () => {
                 return (
                   <Link href={li.link} key={li.id}>
                     <a>
-                      <li style={{ fontWeight: "600" }}>{li.name}</li>
+                      <li className="Navigation__li">{li.name}</li>
                     </a>
                   </Link>
                 );
@@ -43,9 +43,9 @@ const Navigations = () => {
           </div>
           <div className="Navigation__Mobile" onClick={handleClickToggle}>
             {isClicked ? (
-              <FaTimes style={{ fontSize: "1.8em", color: "black" }} />
+              <FaTimes style={{ fontSize: "1.8em", color: "#ffffff" }} />
             ) : (
-              <FaBars style={{ fontSize: "1.8em", color: "black" }} />
+              <FaBars style={{ fontSize: "1.8em", color: "#ffffff" }} />
             )}
           </div>
         </nav>
