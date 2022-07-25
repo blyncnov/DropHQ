@@ -39,3 +39,10 @@
     grid-template-rows: 1fr;
   }
 }
+
+.Drophq__Feature__Title {
+  h1 {
+    font-size: clamp(1.5rem, 1vw, 20px);
+    font-weight: bold;
+  }
+}
