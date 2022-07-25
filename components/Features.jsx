@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { BsArrowReturnRight } from "react-icons/bs";
+
 import Feature from "../data/Feature";
 
 const Features = () => {
@@ -18,15 +20,23 @@ const Features = () => {
                       <Image
                         src={feature.icon}
                         alt={feature.id}
-                        height="50"
-                        width="50"
+                        layout="responsive"
                       />
                     </div>
                     <div className="Drophq__Feature__Title">
                       <h1>{feature.title}</h1>
                       <p>{feature.description}</p>
                       <Link href="/">
-                        <a>{feature.link}</a>
+                        <a
+                          style={{
+                            color: "#3A646E",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: ".5em",
+                          }}
+                        >
+                          {feature.link} <BsArrowReturnRight />
+                        </a>
                       </Link>
                     </div>
                   </div>

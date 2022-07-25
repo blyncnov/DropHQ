@@ -7,15 +7,18 @@
 .Drophq__Feature__Grid {
   display: grid;
   gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(300, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
 
   .Drophq__Feature__Box {
-    padding: 2em 1em;
+    padding: 1.5em 1em;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    display: flex;
+    gap: 1em;
+    align-items: center;
 
     &:hover {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -24,5 +27,15 @@
     p {
       margin: 0.5em 0;
     }
+
+    .Drophq__Feature__Icon {
+      //   background-color: red;
+      flex-basis: 40%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
