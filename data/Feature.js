@@ -26,7 +26,7 @@ export const Features = [
     description:
       "Experience the best your neighborhood has to offer, all in one app.",
     link: "Read More",
-  }
+  },
 ];
 
 export default Features;

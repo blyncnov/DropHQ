@@ -1,5 +1,5 @@
 .Drophq__Feature__Container {
-  padding: 100px 0 50px 0;
+  padding: 50px 0 50px 0;
   background-color: transparent;
   line-height: 1.5;
 }
@@ -7,6 +7,8 @@
 .Drophq__Feature__Grid {
   display: grid;
   gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(300, 1fr));
+  grid-auto-rows: auto;
 
   .Drophq__Feature__Box {
     padding: 2em 1em;
