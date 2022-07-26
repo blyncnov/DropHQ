@@ -4,7 +4,7 @@ This is a Fullstack Application Webapp, created by Taiwo Boluwatife [`Blyncnov`]
 
 ```bash
 welcome to earth
-# or
+# choose
 dropHQ
 ```
 

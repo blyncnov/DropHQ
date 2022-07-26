@@ -44,5 +44,9 @@
   h1 {
     font-size: clamp(1.5rem, 1vw, 20px);
     font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.3rem, 1vw, 20px);
+    }
   }
 }
