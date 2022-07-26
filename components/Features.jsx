@@ -29,7 +29,7 @@ const Features = () => {
                       <Link href="/">
                         <a
                           style={{
-                            color: "#3A646E",
+                            color: "#5890D3",
                             display: "flex",
                             alignItems: "center",
                             gap: ".5em",

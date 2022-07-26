@@ -10,26 +10,26 @@ export const Features = [
   {
     id: 1,
     icon: ImageOne,
-    title: "Become a Dasher",
+    title: "Become a DropHQ Rider.",
     description:
-      "As a delivery driver, you'll make reliable money—working anytime, anywhere.",
-    link: "Read More",
+      "As a delivery driver & dispatcher , you'll make reliable money—working anytime, anywhere.",
+    link: "Start making money",
   },
   {
     id: 2,
     icon: ImageTwo,
-    title: "Become a Partner",
+    title: "Partner with DropHQ.",
     description:
       "Grow your business and reach new customers by partnering with us.",
-    link: "Read More",
+    link: "Sign up your restaurant",
   },
   {
     id: 3,
     icon: ImageThree,
-    title: "Try the App",
+    title: "Try DropHQ App.",
     description:
       "Experience the best your neighborhood has to offer, all in one app.",
-    link: "Read More",
+    link: "Download our app",
   },
 ];
 
