@@ -1,6 +1,10 @@
+// import ImageOne from "../public/assets/brand/ScootScoot.svg";
+// import ImageTwo from "../public/assets/brand/Storefront.svg";
+// import ImageThree from "../public/assets/brand/iphone.svg";
+
 import ImageOne from "../public/assets/brand/ScootScoot.svg";
-import ImageTwo from "../public/assets/brand/Storefront.svg";
-import ImageThree from "../public/assets/brand/iphone.svg";
+import ImageTwo from "../public/assets/svg/shop-1.svg";
+import ImageThree from "../public/assets/svg/phone.svg";
 
 export const Features = [
   {
