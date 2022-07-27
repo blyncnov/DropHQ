@@ -24,6 +24,8 @@ const Navigations = () => {
             </Link>
           </div>
           <div
+            onHide={handleClickToggle}
+            onClick={handleClickToggle}
             className={
               isClicked ? "Right-Navigation active" : "Right-Navigation "
             }
@@ -37,7 +39,12 @@ const Navigations = () => {
                 return (
                   <Link href={li.link} key={li.id}>
                     <a>
-                      <li className="Navigation__li">{li.name}</li>
+                      <li
+                        onClick={handleClickToggle}
+                        className="Navigation__li"
+                      >
+                        {li.name}
+                      </li>
                     </a>
                   </Link>
                 );
