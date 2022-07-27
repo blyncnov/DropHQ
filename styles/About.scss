@@ -15,10 +15,12 @@
 
   .About__Box {
     width: 100%;
-    padding: 1em;
     background-color: #dadada25;
     border-radius: 2px;
     border: 0.3px solid rgba(204, 204, 204, 0.1129);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
 
     h1 {
       @include Title;
@@ -28,7 +30,7 @@
 
     p {
       @include Description;
-      font-weight: 600;
+      //   font-weight: 600;
       font-size: 14px;
     }
 
@@ -38,8 +40,11 @@
       color: white;
     }
 
+    .About__Text__Description {
+      padding: 1em;
+    }
+
     .About__Img img {
-      margin-bottom: 1em;
       width: 100%;
       max-width: 100%;
       border-radius: 2px;
