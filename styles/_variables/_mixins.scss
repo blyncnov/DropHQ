@@ -6,8 +6,22 @@
 
 @mixin Flex {
   display: flex;
-
   align-items: center;
+}
+
+@mixin Title {
+  font-size: clamp(3rem, 1vw, 40px);
+  text-transform: capitalize;
+  color: black;
+  position: relative;
+}
+
+@mixin Description {
+  font-size: clamp(1.2rem, 1vw, 2rem);
+  margin: 1em 0;
+  opacity: 0.8;
+  color: black;
+  line-height: 1.5;
 }
 
 @mixin Button {

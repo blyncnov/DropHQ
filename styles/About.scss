@@ -1,15 +1,49 @@
+@import "./_variables/mixins";
+@import "./_variables/variables";
+
+.About__Container {
+  background-color: white;
+  padding: 1em 0;
+}
+
 .About__Grid {
   margin: 1em 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 1.5em;
   margin-bottom: 1rem;
 
   .About__Box {
     width: 100%;
     padding: 1em;
-    background-color: red;
+    background-color: #dadada25;
     border-radius: 2px;
+    border: 0.3px solid rgba(204, 204, 204, 0.1129);
+
+    h1 {
+      @include Title;
+      font-size: clamp(2rem, 1vw, 40px);
+      color: black;
+    }
+
+    p {
+      @include Description;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn {
+      @include Button;
+      background-color: #b6142d;
+      color: white;
+    }
+
+    .About__Img img {
+      margin-bottom: 1em;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 2px;
+    }
   }
 
   @media (max-width: 768px) {
