@@ -17,7 +17,7 @@ const About = () => {
               <Image src={ImageOne} alt="restaurant" layout="responsive" />
             </div>
             <div className="About__Text__Description">
-              <h1>Boripe Canteen & Store</h1>
+              <h1>Boripe Canteen</h1>
               <p>
                 Discover local, on-demand delivery or Pickup from restaurants,
                 nearby grocery and convenience stores, and more.
@@ -30,7 +30,7 @@ const About = () => {
               <Image src={ImageTwo} alt="restaurant" layout="responsive" />
             </div>
             <div className="About__Text__Description">
-              <h1>Hand Of God Restaurant</h1>
+              <h1>Hand Of God</h1>
               <p>
                 Discover local, on-demand delivery or Pickup from restaurants,
                 nearby grocery and convenience stores, and more.
