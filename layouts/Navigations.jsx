@@ -29,6 +29,10 @@ const Navigations = () => {
             }
           >
             <ul className="Navigation__List">
+              <div className="DisplayMobileLogo">
+                <h1>DropQH</h1>
+                <hr />
+              </div>
               {Navigation__Data.map((li) => {
                 return (
                   <Link href={li.link} key={li.id}>

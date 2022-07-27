@@ -20,3 +20,36 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(31, 64, 199);
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: tomato;
+  background: url(/bg1.png),
+    linear-gradient(70deg, #b4142c 0%, rgba(20, 38, 85, 1) 35%, #b4142c 100%),
+    url(/bg4.png);
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+.vertical-timeline-element-content {
+  background-color: white !important;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px,
+    rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+  border-radius: 10px;
+  border: 2px solid rgba(231, 230, 230, 0.111);
+}

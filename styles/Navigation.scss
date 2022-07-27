@@ -45,10 +45,10 @@ nav {
     padding: 0.8125rem 1.5625rem;
 
     @media (max-width: 768px) {
-      margin: 0 2em;
+      margin: 2em 1.1em;
       color: white;
       width: calc(100% - 4em);
-      background-color: black;
+      background-color: #b6142d;
       padding: 0.8125rem 1.5625rem;
     }
   }
@@ -82,14 +82,31 @@ nav {
 
       li {
         display: block;
-        border-bottom: 1px solid #f3f3f2;
-        margin: 1.5em 2em;
+        margin: 1.5em 1.1em;
       }
 
       .Navigation__li {
-        font-weight: 600;
+        font-weight: 400;
         color: black;
+        font-size: 13px;
       }
+    }
+  }
+}
+
+.DisplayMobileLogo {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+
+    h1 {
+      margin: 0.5em 0.5em;
+      color: #b6142d;
+    }
+
+    hr {
+      border-top: 1px solid #b6142c1b;
     }
   }
 }

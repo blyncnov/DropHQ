@@ -1,0 +1,18 @@
+.About__Grid {
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+
+  .About__Box {
+    width: 100%;
+    padding: 1em;
+    background-color: red;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

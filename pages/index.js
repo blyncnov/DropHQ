@@ -1,4 +1,5 @@
 import Head from "next/head";
+import About from "../components/About";
 import Features from "../components/Features";
 import Header from "../layouts/Header";
 
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <Header />
       <Features />
+      <About />
     </>
   );
 }
