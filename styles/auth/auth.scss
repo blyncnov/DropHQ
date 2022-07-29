@@ -87,11 +87,12 @@
   font-size: 12px;
   font-weight: 500;
   color: #2e5559;
-  //   text-align: start;
 }
 
 form {
   .login__input {
+    margin-bottom: 0.5em;
+
     input {
       width: 100%;
       padding: 0.5em;

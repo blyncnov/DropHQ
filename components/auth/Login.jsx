@@ -37,6 +37,7 @@ const LoginPageComponents = () => {
                             placeholder="Username"
                           />
                         </div>
+
                         <div className="login__input">
                           <label htmlFor="fname">Password :</label>
                           <br />
@@ -47,6 +48,7 @@ const LoginPageComponents = () => {
                             placeholder="Password"
                           />
                         </div>
+
                         <div className="login__input">
                           <button>Login</button>
                         </div>
