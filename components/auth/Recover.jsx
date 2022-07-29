@@ -32,7 +32,7 @@ const RecoverComponent = () => {
                           <br />
                           <input
                             type="text"
-                            value="bholuwatife00@gmail.com"
+                            defaultValue="bholuwatife00@gmail.com"
                             name="email"
                             placeholder="email"
                           />

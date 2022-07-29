@@ -20,7 +20,7 @@ const SignupPageComponent = () => {
                 <div>
                   <div>
                     <div className="login__information">
-                      <p>Please enter your username and password to login.</p>
+                      <p>Please provide your valid information to Signup .</p>
                     </div>
                     <div className="login__form">
                       <form>
