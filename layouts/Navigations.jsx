@@ -50,7 +50,11 @@ const Navigations = () => {
                 );
               })}
             </ul>
-            <button>Download App</button>
+            <button>
+              <Link href="https://play.google.com/store/games/details?id=com.drop.dropapp">
+                <a>Download App</a>
+              </Link>
+            </button>
           </div>
           <div className="Navigation__Mobile" onClick={handleClickToggle}>
             {isClicked ? (

@@ -6,13 +6,13 @@ export const Navigation__Data = [
   },
   {
     id: 2,
-    name: "Exclusive Deals",
-    link: "/deals",
+    name: "Our Restaurants",
+    link: "/restaurants",
   },
   {
     id: 3,
-    name: "Location",
-    link: "/location",
+    name: "Locations",
+    link: "/locations",
   },
   {
     id: 4,

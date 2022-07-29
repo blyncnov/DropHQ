@@ -26,7 +26,7 @@ const Features = () => {
                     <div className="Drophq__Feature__Title">
                       <h1>{feature.title}</h1>
                       <p>{feature.description}</p>
-                      <Link href="/">
+                      <Link href={feature.url}>
                         <a
                           style={{
                             color: "#5890D3",

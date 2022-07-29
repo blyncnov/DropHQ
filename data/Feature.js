@@ -14,6 +14,7 @@ export const Features = [
     description:
       "As a delivery driver & dispatcher , you'll make reliable money—working anytime, anywhere.",
     link: "Start making money",
+    url: "auth/signup",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const Features = [
     description:
       "Grow your business and reach new customers by partnering with us.",
     link: "Sign up your restaurant",
+    url: "auth/signup",
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const Features = [
     description:
       "Experience the best your neighborhood has to offer, all in one app.",
     link: "Download our app",
+    url: "https://play.google.com/store/games/details?id=com.drop.dropapp",
   },
 ];
 

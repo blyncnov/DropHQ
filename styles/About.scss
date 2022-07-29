@@ -6,12 +6,10 @@
   padding: 1em 0;
 }
 
-.About__Grid {
-  margin: 1em 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5em;
-  margin-bottom: 1rem;
+.Restaurant__Slider {
+  width: 100%;
+  max-width: 100%;
+  padding: 2em 0;
 
   .About__Box {
     width: 100%;
@@ -53,9 +51,5 @@
       max-width: 100%;
       border-radius: 2px;
     }
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
   }
 }
