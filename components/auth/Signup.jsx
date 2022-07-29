@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
+import { FaFacebookF } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+
 const SignupPageComponent = () => {
   return (
     <div>
@@ -68,10 +71,11 @@ const SignupPageComponent = () => {
                       </div>
                       <div className="login__option">
                         <button className="btn-facebook">
-                          Continue with Facebook
+                          <FaFacebookF /> Login with Facebook
                         </button>
                         <button className="btn-google">
-                          Continue with Google
+                          <FcGoogle />
+                          Login with Google
                         </button>
                       </div>
                     </div>
