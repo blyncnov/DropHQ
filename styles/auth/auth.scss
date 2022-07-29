@@ -61,6 +61,10 @@
   .Login__Container__Inside {
     width: 100%;
   }
+
+  @media (max-width: 767px) {
+    padding: 1em;
+  }
 }
 
 .login__information {
