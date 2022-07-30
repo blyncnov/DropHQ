@@ -1,7 +1,10 @@
 import Head from "next/head";
-import About from "../components/About";
+import About from "../components/OurRestaurant";
 import Features from "../components/Features";
+import SliderComponent from "../components/SliderComponent";
 import Header from "../layouts/Header";
+
+import SlideData from "../data/SlideData";
 
 export default function Home() {
   return (
@@ -14,6 +17,7 @@ export default function Home() {
       <Header />
       <Features />
       <About />
+      <SliderComponent slidesData={SlideData} />
     </>
   );
 }

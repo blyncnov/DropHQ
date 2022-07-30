@@ -3,14 +3,9 @@ import "../styles/Header.scss";
 import "../styles/Navigation.scss";
 import "../styles/Hero.scss";
 import "../styles/Feature.scss";
-import "../styles/About.scss";
+import "../styles/restaurants.scss";
 import "../styles/auth/auth.scss";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "../styles/util/slider.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

@@ -3,13 +3,28 @@
 
 .About__Container {
   background-color: white;
-  padding: 1em 0;
+
+  h1 {
+    @include Title;
+    font-size: clamp(1.7rem, 1vw, 30px);
+  }
 }
 
 .Restaurant__Slider {
   width: 100%;
   max-width: 100%;
-  padding: 2em 0;
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: 1fr;
+  gap: 2em;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .About__Box {
     width: 100%;
@@ -22,7 +37,7 @@
 
     h1 {
       @include Title;
-      font-size: clamp(2rem, 1vw, 40px);
+      font-size: clamp(1.5rem, 1vw, 30px);
       color: black;
     }
 
