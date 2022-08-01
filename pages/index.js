@@ -5,6 +5,7 @@ import SliderComponent from "../components/SliderComponent";
 import Header from "../layouts/Header";
 
 import SlideData from "../data/SlideData";
+import Footer from "../layouts/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       <Header />
       <Features />
       <About />
-      <SliderComponent slidesData={SlideData} />
+      <Footer />
     </>
   );
 }

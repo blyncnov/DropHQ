@@ -1,0 +1,43 @@
+.Footer__Container {
+  padding: 2em 0;
+  background-color: #1f1f1f;
+  color: white;
+
+  h6 {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .Footer__Content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1em;
+
+    .box {
+      line-height: 1.3;
+
+      h1 {
+        font-size: 1.5em;
+        color: white;
+      }
+
+      p {
+        margin: 0.5em 0;
+        font-weight: 300;
+        color: rgb(230, 224, 224);
+      }
+
+      ul {
+        li {
+          margin: 0.5em 0;
+          color: rgb(230, 224, 224);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}

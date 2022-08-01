@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/Header.scss";
 import "../styles/Navigation.scss";
 import "../styles/Hero.scss";
+import "../styles/Footer.scss";
 import "../styles/Feature.scss";
 import "../styles/restaurants.scss";
 import "../styles/auth/auth.scss";
