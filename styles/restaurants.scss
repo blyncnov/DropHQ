@@ -58,6 +58,18 @@
 
     .About__Text__Description {
       padding: 1em;
+
+      .Restaurant__Review__Tab {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        p,
+        p span {
+          opacity: 0.8 !important;
+        }
+      }
     }
 
     .About__Img {
