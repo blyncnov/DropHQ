@@ -14,7 +14,7 @@ const BecomeARider = () => {
                     <h1>DropHQ</h1>
                   </a>
                 </Link>
-                <p>Become a Rider for dropHQ Today .</p>
+                <p>Become a Rider for dropHQ Today.</p>
               </div>
               <div className="Login__Right__Side">
                 <div>
