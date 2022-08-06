@@ -12,7 +12,7 @@
 }
 
 .Restaurant__Slider {
-  background-color: transparent !important;
+  background-color: white !important;
   width: 100%;
   max-width: 100%;
   margin: 1em 0;
@@ -29,14 +29,16 @@
 
   .About__Box {
     width: 100%;
-    background-color: #dadada25;
+    background-color: rgba(218, 218, 218, 0.145);
     border-radius: 3px;
     border: 0.3px solid rgba(204, 204, 204, 0.1129);
     display: flex;
     flex-direction: column;
     gap: 0.6em;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
     transition: all 0.5s ease-in-out;
+    scroll-snap-type: x mandatory !important;
 
     h1 {
       @include Title;
@@ -48,6 +50,10 @@
       @include Description;
       //   font-weight: 600;
       font-size: 14px;
+
+      &:nth-child(3) {
+        margin-top: 0;
+      }
     }
 
     .btn {
@@ -86,7 +92,6 @@
 
   &:hover {
     .About__Box {
-      background-color: #f9f5f5;
       box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     }
   }

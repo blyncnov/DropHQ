@@ -27,24 +27,27 @@ const PartnerWithDropHQ = () => {
                     </div>
                     <div className="login__form">
                       <form>
-                        <div className="login__input">
-                          <label htmlFor="fname">First Name :</label>
-                          <br />
-                          <input
-                            type="text"
-                            name="firstname"
-                            placeholder="Enter First Name"
-                          />
+                        <div className="group__form">
+                          <div className="login__input">
+                            <label htmlFor="fname">First Name :</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="firstname"
+                              placeholder="Enter First Name"
+                            />
+                          </div>
+                          <div className="login__input">
+                            <label htmlFor="fname">Last Name :</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="lastname"
+                              placeholder="Enter last name"
+                            />
+                          </div>
                         </div>
-                        <div className="login__input">
-                          <label htmlFor="fname">Last Name :</label>
-                          <br />
-                          <input
-                            type="text"
-                            name="lastname"
-                            placeholder="Enter last name"
-                          />
-                        </div>
+
                         <div className="login__input">
                           <label htmlFor="fname">Phone Number :</label>
                           <br />

@@ -175,3 +175,15 @@ form {
     gap: 0.5em;
   }
 }
+
+.group__form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0.5em;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

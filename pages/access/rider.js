@@ -27,23 +27,25 @@ const BecomeARider = () => {
                     </div>
                     <div className="login__form">
                       <form>
-                        <div className="login__input">
-                          <label htmlFor="fname">First Name :</label>
-                          <br />
-                          <input
-                            type="text"
-                            name="firstname"
-                            placeholder="Enter First Name"
-                          />
-                        </div>
-                        <div className="login__input">
-                          <label htmlFor="fname">Last Name :</label>
-                          <br />
-                          <input
-                            type="text"
-                            name="lastname"
-                            placeholder="Enter last name"
-                          />
+                        <div className="group__form">
+                          <div className="login__input">
+                            <label htmlFor="fname">First Name :</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="firstname"
+                              placeholder="Enter First Name"
+                            />
+                          </div>
+                          <div className="login__input">
+                            <label htmlFor="fname">Last Name :</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="lastname"
+                              placeholder="Enter last name"
+                            />
+                          </div>
                         </div>
                         <div className="login__input">
                           <label htmlFor="fname">Phone Number :</label>
@@ -72,7 +74,7 @@ const BecomeARider = () => {
                         </div>
 
                         <div className="login__input">
-                          <button>Become a rider</button>
+                          <button>Become a Rider</button>
                         </div>
                       </form>
                     </div>
