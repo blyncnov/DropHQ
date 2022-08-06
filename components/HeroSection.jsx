@@ -1,5 +1,8 @@
 import React from "react";
 
+import { HiLocationMarker } from "react-icons/hi";
+import { MdOutlineLocationSearching } from "react-icons/md";
+
 const HeroSection = () => {
   return (
     <div className="Hero__Container">
@@ -13,7 +16,15 @@ const HeroSection = () => {
                 want to position your restaurant as a place to bring the whole
                 family.
               </p>
-              <button className="btn">Find Restaurants</button>
+              <div className="Search__For__Restaurant">
+                <>
+                  <HiLocationMarker style={{ fontSize: "1.2em" }} />
+                </>
+                <input type="text" placeholder="Enter delivery address" />
+                <button>
+                  <MdOutlineLocationSearching style={{ fontSize: "1.2em" }} />
+                </button>
+              </div>
             </div>
           </div>
         </div>
