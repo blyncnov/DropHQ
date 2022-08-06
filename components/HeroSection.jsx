@@ -20,7 +20,7 @@ const HeroSection = () => {
                 <>
                   <HiLocationMarker style={{ fontSize: "1.2em" }} />
                 </>
-                <input type="text" placeholder="Find available restaurants" />
+                <input type="search" placeholder="Find available restaurants" />
                 <button>
                   <MdOutlineLocationSearching style={{ fontSize: "1.2em" }} />
                 </button>
