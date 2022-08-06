@@ -8,7 +8,11 @@ const Footer = () => {
           <div className="Footer__Content">
             <div className="box">
               <h1>DropHQ</h1>
-              <p>Great food makes people think of big family dinners.</p>
+              <p>
+                Great food makes people think of big family dinners. Discover
+                local, on-demand delivery or Pickup from restaurants, nearby
+                grocery and convenience stores, and more.
+              </p>
             </div>
 
             <div className="box">
@@ -30,7 +34,22 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <h6>2022 | drop-hq.com</h6>
+          <br />
+          <br />
+          <br />
+          <div className="Footer__incorp">
+            <h6>© 2022 | drop-hq.com</h6>
+            <h6>
+              Made with 💖{" "}
+              <a
+                href="https://blyncnov.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blyncnov
+              </a>
+            </h6>
+          </div>
         </div>
       </div>
     </>

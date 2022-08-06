@@ -24,7 +24,6 @@ const Navigations = () => {
             </Link>
           </div>
           <div
-            onHide={handleClickToggle}
             onClick={handleClickToggle}
             className={
               isClicked ? "Right-Navigation active" : "Right-Navigation "
