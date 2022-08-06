@@ -14,7 +14,7 @@ export const Features = [
     description:
       "As a delivery driver & dispatcher , you'll make reliable money—working anytime, anywhere.",
     link: "Start making money",
-    url: "auth/signup",
+    url: "access/rider",
   },
   {
     id: 2,
