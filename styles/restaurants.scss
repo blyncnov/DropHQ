@@ -12,6 +12,7 @@
 }
 
 .Restaurant__Slider {
+  background-color: transparent !important;
   width: 100%;
   max-width: 100%;
   margin: 1em 0;
@@ -35,6 +36,7 @@
     flex-direction: column;
     gap: 0.6em;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    transition: all 0.5s ease-in-out;
 
     h1 {
       @include Title;
@@ -67,6 +69,13 @@
       width: 100%;
       max-width: 100%;
       border-radius: 2px;
+    }
+  }
+
+  &:hover {
+    .About__Box {
+      background-color: #f9f5f5;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     }
   }
 }
