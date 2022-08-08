@@ -42,6 +42,8 @@ const SingleRestaurant = () => {
           </div>
         </div>
         <>
+          <br />
+          <br />
           <div className="Layout__constraint">
             <div className="Restaurant__Menu">
               <h2>Our Menu</h2>

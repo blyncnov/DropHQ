@@ -7,7 +7,7 @@
   .Single__Restaurants__Container-Box {
     width: 100%;
     height: 20vh;
-    background-color: red;
+    background-color: #bd152e;
     position: relative;
 
     .Single__Restaurants__Container-Flex {
@@ -19,7 +19,7 @@
     .Single__Restaurants__Container-Box-Image-Card {
       width: 100px;
       height: 100px;
-      background-color: blue;
+      background-color: #2d62d1;
       position: absolute;
       bottom: -20%;
       display: flex;
@@ -42,6 +42,7 @@
 
   h1 {
     float: right;
+    color: black;
   }
 
   p {
