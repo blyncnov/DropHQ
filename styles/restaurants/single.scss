@@ -1,0 +1,110 @@
+@import "../_variables/mixins";
+@import "../_variables/variables";
+
+.Single__Restaurants__Container {
+  width: 100%;
+
+  .Single__Restaurants__Container-Box {
+    width: 100%;
+    height: 20vh;
+    background-color: red;
+    position: relative;
+
+    .Single__Restaurants__Container-Flex {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .Single__Restaurants__Container-Box-Image-Card {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+      bottom: -20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border-radius: 3px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.Single__Restaurants__Text {
+  line-height: 1.3;
+  margin: 10px 0;
+
+  h1 {
+    float: right;
+  }
+
+  p {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+}
+
+.About__Text__Description {
+  .Restaurant__Review__Tab {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.5em 0 p, p span {
+      opacity: 0.8 !important;
+    }
+  }
+}
+
+.Restaurant__Menu {
+  margin: 1em 0;
+
+  .Restaurant__Menu__Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    margin: 1em 0;
+
+    .Restaurant__Menu__Grid__Box {
+      width: 100%;
+      padding: 0.5em;
+      color: #333;
+      border-radius: 3px;
+      transition: all 0.5s ease-in-out;
+      scroll-snap-align: start;
+      background-color: rgba(204, 204, 204, 0.105);
+
+      &:hover {
+        background-color: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      }
+
+      h3 {
+        @include Description;
+        font-weight: 600;
+        margin: 0.4em 0;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      h4 {
+        @include Description;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

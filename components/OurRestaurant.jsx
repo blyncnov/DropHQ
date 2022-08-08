@@ -7,6 +7,7 @@ import ImageThree from "../public/assets/images/res-3.avif";
 import ImageFour from "../public/assets/images/res-4.avif";
 
 import { AiFillStar } from "react-icons/ai";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -33,7 +34,11 @@ const About = () => {
                 <p>No reviews yet</p>
               )}
               <p>Nicest place for Pasta & Snacks, grab one for yourself.</p>
-              <button className="btn">View Restaurant</button>
+              <Link href="restaurant/if">
+                <a>
+                  <button className="btn">View Restaurant </button>
+                </a>
+              </Link>
             </div>
           </div>
           <div className="About__Box">
@@ -44,7 +49,11 @@ const About = () => {
               <h1>Bamboo Kitchen</h1>
               {2 == 3 ? <p>Hi</p> : <p>No reviews yet</p>}
               <p>Ofada rice and Banga soup (wine leafs with rice)</p>
-              <button className="btn">View Restaurant</button>
+              <Link href="restaurant/if">
+                <a>
+                  <button className="btn">View Restaurant </button>
+                </a>
+              </Link>{" "}
             </div>
           </div>
 
@@ -67,7 +76,11 @@ const About = () => {
                 <p>No reviews yet</p>
               )}
               <p>Fried Rice and Turkey, Salad and Fine Wines </p>
-              <button className="btn">View Restaurant</button>
+              <Link href="restaurant/if">
+                <a>
+                  <button className="btn">View Restaurant </button>
+                </a>
+              </Link>{" "}
             </div>
           </div>
           <div className="About__Box">
@@ -89,7 +102,11 @@ const About = () => {
                 <p>No reviews yet</p>
               )}
               <p>Okele (Swallow) , Fish , Assorted Meat and Soft Drinks</p>
-              <button className="btn">View Restaurant</button>
+              <Link href="restaurant/if">
+                <a>
+                  <button className="btn">View Restaurant </button>
+                </a>
+              </Link>{" "}
             </div>
           </div>
         </div>

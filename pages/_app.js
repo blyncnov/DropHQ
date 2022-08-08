@@ -8,6 +8,7 @@ import "../styles/restaurants.scss";
 import "../styles/ErrorPage.scss";
 import "../styles/auth/auth.scss";
 import "../styles/util/slider.scss";
+import "../styles/restaurants/single.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
