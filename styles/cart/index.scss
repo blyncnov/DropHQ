@@ -1,0 +1,40 @@
+.cart__container__body {
+  .cart__container {
+    position: fixed;
+    // bottom: 10px;
+    width: auto;
+    right: 4%;
+    top: 2%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 7%);
+    border-top: 1px solid #f3f4f7;
+    z-index: 1;
+
+    border-radius: 4px;
+    padding: 1em 1.7em 1em 1em;
+
+    .cart__header {
+      display: flex;
+
+      .item-group {
+        display: flex;
+        gap: 0.2em;
+        position: relative;
+
+        .cart__count {
+          position: absolute;
+          top: -15px;
+          right: -15px;
+          font-size: 0.8rem;
+          background-color: #04a7ff;
+          color: white;
+          padding: 0.5em;
+          clip-path: circle();
+          border-radius: 50%;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

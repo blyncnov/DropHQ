@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
+import Cart from "../../components/Cart";
 
 const SingleRestaurant = () => {
   return (
@@ -85,6 +86,7 @@ const SingleRestaurant = () => {
           </div>
         </>
       </div>
+      <Cart />
     </>
   );
 };
