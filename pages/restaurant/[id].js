@@ -16,8 +16,6 @@ const SingleRestaurant = () => {
 
   const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
 
-  console.log(isUserOrdering);
-
   const OrderOptionHandler = () => {
     dispatch({ type: IS__ORDERING });
   };
