@@ -82,9 +82,15 @@
       transition: all 0.5s ease-in-out;
       scroll-snap-align: start;
       background-color: rgba(204, 204, 204, 0.105);
+      box-shadow: 0 2px 5px rgb(0 0 0 / 4%);
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      &:active {
+        transform: scale(1.1);
+        border-bottom: 0.5px solid #2d62d1;
+      }
 
       &:hover {
         background-color: rgba(17, 12, 46, 0.205) 0px 48px 100px 0px;
