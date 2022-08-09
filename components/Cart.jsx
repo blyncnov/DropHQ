@@ -1,7 +1,6 @@
 import React from "react";
 
 import { GiShoppingCart } from "react-icons/gi";
-import { AiOutlineHome } from "react-icons/ai";
 
 const Cart = () => {
   return (

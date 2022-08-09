@@ -47,7 +47,7 @@ const SingleRestaurant = () => {
           <br />
           <div className="Layout__constraint">
             <div className="Restaurant__Menu">
-              <h2>Our Menu</h2>
+              <h2>Full Menu</h2>
               <div className="Restaurant__Menu__Grid">
                 <div className="Restaurant__Menu__Grid__Box">
                   <h3>Bread </h3>
