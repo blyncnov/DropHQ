@@ -14,7 +14,7 @@
 .Restaurant__Slider__Grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-  grid-gap: 1em !important;
+  grid-gap: 2em !important;
   // margin-bottom: 1em;
 
   @media (max-width: 768px) {

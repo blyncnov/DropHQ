@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { AiFillStar } from "react-icons/ai";
 
 import Cart from "../../components/CartComp";
-import OrderDesc from "../../components/helper/OrderDesc";
+import OrderDesc from "../../components/cart/OrderDesc";
 
 import Menu from "../../data/menu";
 
