@@ -16,9 +16,18 @@ import "../styles/restaurants/single.scss";
 
 // Cart
 import "../styles/cart/index.scss";
+import "../styles/cart/OrderDesc.scss";
+
+// Redux
+import store from "../redux/store";
+import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
 export default MyApp;

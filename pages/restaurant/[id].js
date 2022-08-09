@@ -1,11 +1,27 @@
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
-import Cart from "../../components/Cart";
+
+import IS__ORDERING from "../../redux/actions/action";
+import { useSelector, useDispatch } from "react-redux";
+
+import { AiFillStar } from "react-icons/ai";
+
+import Cart from "../../components/CartComp";
+import OrderDesc from "../../components/helper/OrderDesc";
 
 import Menu from "../../data/menu";
 
 const SingleRestaurant = () => {
+  const dispatch = useDispatch();
+
+  const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
+
+  console.log(isUserOrdering);
+
+  const OrderOptionHandler = () => {
+    dispatch({ type: IS__ORDERING });
+  };
+
   return (
     <>
       <div className="Single__Restaurants__Container">
@@ -59,7 +75,7 @@ const SingleRestaurant = () => {
                         <h4>{`₦${item.price}`}</h4>
                       </div>
                       <div>
-                        <button>Add</button>
+                        <button onClick={OrderOptionHandler}>Add</button>
                       </div>
                     </div>
                   );
@@ -70,6 +86,7 @@ const SingleRestaurant = () => {
         </>
       </div>
       <Cart />
+      <OrderDesc isUserOrdering={isUserOrdering} />
     </>
   );
 };
