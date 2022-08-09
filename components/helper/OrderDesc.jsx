@@ -12,7 +12,6 @@ const OrderDesc = ({ isUserOrdering }) => {
 
   return (
     <div>
-      
       <div
         className={
           isUserOrdering
@@ -36,7 +35,6 @@ const OrderDesc = ({ isUserOrdering }) => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
