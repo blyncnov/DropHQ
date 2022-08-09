@@ -11,6 +11,17 @@
   }
 }
 
+.Restaurant__Slider__Grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  grid-gap: 1em !important;
+  // margin-bottom: 1em;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .Restaurant__Slider {
   background-color: white !important;
   width: 100%;
@@ -82,6 +93,10 @@
       width: 250px !important;
     }
 
+    .Restaurant__Img {
+      width: 100% !important;
+    }
+
     .About__Img img {
       width: 100%;
       max-width: 100%;
@@ -93,5 +108,23 @@
     .About__Box {
       background-color: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     }
+  }
+}
+
+.Restaurant__Header__text {
+  color: white !important;
+  padding: 1em 0;
+
+  h2 {
+    @include Title;
+    font-size: clamp(1.5rem, 1vw, 30px);
+    color: white;
+  }
+
+  h4 {
+    @include Description;
+    font-size: clamp(1rem, 1vw, 30px);
+    color: white;
+    font-weight: 400;
   }
 }

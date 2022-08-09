@@ -1,22 +1,38 @@
 import React from "react";
+
+import Navigation from "../../layouts/Navigations";
+import Footer from "../../layouts/Footer";
+
 import Image from "next/image";
 
-import ImageOne from "../public/assets/images/res-1.jpeg";
-import ImageTwo from "../public/assets/images/res-2.jpeg";
-import ImageThree from "../public/assets/images/res-3.avif";
-import ImageFour from "../public/assets/images/res-4.avif";
+import ImageOne from "../../public/assets/images/res-1.jpeg";
+import ImageTwo from "../../public/assets/images/res-2.jpeg";
+import ImageThree from "../../public/assets/images/res-3.avif";
+import ImageFour from "../../public/assets/images/res-4.avif";
 
 import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
 
-const About = () => {
+const Restaurants = () => {
   return (
-    <div className="About__Container">
+    <>
+      <div className="Restaurant__Header">
+        <Navigation />
+        <div className="Layout__constraint">
+          <div className="Restaurant__Header__text">
+            <h2>Our available restaurant</h2>
+            <h4>
+              Feeling like having pizza? How about Sushi? Satisfy your cravings
+              with a few quick clicks and enjoy the world of delivery! Check a
+              great selection of restaurants by selecting a category below.
+            </h4>
+          </div>
+        </div>
+      </div>
       <div className="Layout__constraint">
-        <h1>Our Restaurants</h1>
-        <div className="Restaurant__Slider">
+        <div className="Restaurant__Slider Restaurant__Slider__Grid">
           <div className="About__Box">
-            <div className="About__Img">
+            <div className="About__Img Restaurant__Img">
               <Image src={ImageOne} alt="restaurant" layout="responsive" />
             </div>
             <div className="About__Text__Description">
@@ -42,7 +58,7 @@ const About = () => {
             </div>
           </div>
           <div className="About__Box">
-            <div className="About__Img">
+            <div className="About__Img Restaurant__Img">
               <Image src={ImageTwo} alt="restaurant" layout="responsive" />
             </div>
             <div className="About__Text__Description">
@@ -58,7 +74,7 @@ const About = () => {
           </div>
 
           <div className="About__Box">
-            <div className="About__Img">
+            <div className="About__Img Restaurant__Img">
               <Image src={ImageFour} alt="restaurant" layout="responsive" />
             </div>
             <div className="About__Text__Description">
@@ -84,7 +100,7 @@ const About = () => {
             </div>
           </div>
           <div className="About__Box">
-            <div className="About__Img">
+            <div className="About__Img Restaurant__Img">
               <Image src={ImageThree} alt="restaurant" layout="responsive" />
             </div>
             <div className="About__Text__Description">
@@ -111,8 +127,9 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
-export default About;
+export default Restaurants;
