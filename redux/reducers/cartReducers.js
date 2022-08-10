@@ -1,4 +1,4 @@
-import { IS__ORDERING, CANCEL__ORDER } from "../actions/action";
+import { IS__ORDERING, CANCEL__ORDER, ADD__TO__CART } from "../actions/action";
 
 const InitialState = {
   isOrdering: false,
@@ -16,6 +16,11 @@ export const cartReducers = (state = InitialState, action) => {
       return {
         ...state,
         isOrdering: false,
+      };
+    case ADD__TO__CART:
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
       };
     default:
       return state;

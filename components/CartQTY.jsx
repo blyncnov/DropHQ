@@ -1,8 +1,12 @@
 import React from "react";
 
+import { useDispatch, useSelector } from "react-redux";
+
 import { GiShoppingCart } from "react-icons/gi";
 
-const Cart = () => {
+const CartQTY = () => {
+  const cart = useSelector((state) => state.cartReducer.cart);
+
   return (
     <div className="cart__container__body">
       <div className="Layout__constraint">
@@ -12,7 +16,7 @@ const Cart = () => {
               <span>
                 <GiShoppingCart style={{ fontSize: "1.5em" }} />
               </span>
-              <div className="cart__count">1</div>
+              <div className="cart__count">{cart.length}</div>
             </div>
           </div>
         </div>
@@ -21,4 +25,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default CartQTY;
