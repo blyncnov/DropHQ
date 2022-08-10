@@ -1,6 +1,7 @@
 import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
+import Address from "../util/address";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,6 @@ const Cart = () => {
                         <h4> {item.QTY} </h4>
                         <p> ₦{item.price} </p>
                       </div>
-
                       <h6> {item.description} </h6>
                     </div>
                   );
@@ -41,12 +41,13 @@ const Cart = () => {
               </>
             )}
           </div>
+
           <div className="Cart__Body">
             <h4> CART SUMMARY ({cartItem.length})</h4>
             <div className="Cart__Summary">
               <div className="Cart__Summary__Grid">
                 <h4> Sub Total</h4>
-                <p> {TotalCart}</p>
+                <p> ₦{TotalCart}</p>
               </div>
               <div className="Cart__Summary__Grid">
                 <h4> Delivery Fee</h4>
@@ -57,8 +58,12 @@ const Cart = () => {
                 <p> ₦50</p>
               </div>
               <div className="Cart__Summary__Grid">
-                <h4> Cart Total</h4>
-                <p> {TotalCart + 300 + 50}</p>
+                <h4> Pack Fee</h4>
+                <p> ₦150</p>
+              </div>
+              <div className="Cart__Summary__Grid">
+                <h4> Grand Total</h4>
+                <p> ₦{TotalCart + 300 + 50 + 150}</p>
               </div>
               <button className="Cart__payment">Proceed to payment</button>
               <h6>Secure Checkout shipping is always safe and secure.</h6>

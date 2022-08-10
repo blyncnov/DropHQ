@@ -15,6 +15,15 @@
   }
 }
 
+.Login__Container__White {
+  background-color: white !important;
+
+  h4 {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
 .Login__Box {
   background-color: white;
   border-radius: 4px;
@@ -93,7 +102,8 @@ form {
   .login__input {
     margin-bottom: 0.5em;
 
-    input {
+    input,
+    select {
       width: 100%;
       padding: 0.5em;
       height: 40px;
