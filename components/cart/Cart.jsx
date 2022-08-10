@@ -10,19 +10,53 @@ const Cart = () => {
   console.log(cartItem);
 
   return (
-    <>
+    <div>
       <div className="Layout__constraint">
-        <h3>My Cart</h3>
-        {cartItem.map((item, index) => {
-          return (
-            <div key={index}>
-              <h4> {item.name} </h4>
-              <p> {item.price} </p>
+        <div className="Cart__container__Grid__Container">
+          <div className="Cart__Body">
+            <h4> Cart ({cartItem.length})</h4>
+            <br />
+            {cartItem.map((item, index) => {
+              return (
+                <div className="Cart__Section__Container" key={index}>
+                  <div className="Cart__Section">
+                    {" "}
+                    <h4> {item.name} </h4>
+                    <h4> {item.QTY} </h4>
+                    <p> ₦{item.price} </p>
+                  </div>
+
+                  <h6> {item.description} </h6>
+                </div>
+              );
+            })}
+          </div>
+          <div className="Cart__Body">
+            <h4> CART SUMMARY (₦{cartItem.length}000)</h4>
+            <div className="Cart__Summary">
+              <div className="Cart__Summary__Grid">
+                <h4> Sub Total</h4>
+                <p> ₦500</p>
+              </div>
+              <div className="Cart__Summary__Grid">
+                <h4> Delivery Fee</h4>
+                <p> ₦300</p>
+              </div>
+              <div className="Cart__Summary__Grid">
+                <h4> Charges</h4>
+                <p> ₦50</p>
+              </div>
+              <div className="Cart__Summary__Grid">
+                <h4> Cart Total</h4>
+                <p> ₦900</p>
+              </div>
+              <button className="Cart__payment">Proceed to payment</button>
+              <h6>Secure Checkout shipping is always safe and secure.</h6>
             </div>
-          );
-        })}
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

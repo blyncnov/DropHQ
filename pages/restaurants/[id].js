@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 import IS__ORDERING from "../../redux/actions/action";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,7 +7,7 @@ import { AiFillStar } from "react-icons/ai";
 
 import CartQTY from "../../components/CartQTY";
 import OrderDesc from "../../components/cart/OrderDesc";
-import Cart from "../../components/cart/Cart";
+// import Cart from "../../components/cart/Cart";
 
 import Menu from "../../data/menu";
 
@@ -86,7 +85,6 @@ const SingleRestaurant = () => {
       </div>
       <CartQTY />
       <OrderDesc isUserOrdering={isUserOrdering} />
-      <Cart />
     </>
   );
 };

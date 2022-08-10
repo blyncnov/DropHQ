@@ -6,6 +6,8 @@ import { CANCEL__ORDER, ADD__TO__CART } from "../../redux/actions/action";
 
 const OrderDesc = ({ isUserOrdering }) => {
   const dispatch = useDispatch();
+
+  const myCart = useSelector((state) => state.cartReducer.cart);
   const amOrdering = useSelector((state) => state.cartReducer.amOrdering);
 
   const AddToCartHandler = (e) => {
@@ -15,16 +17,26 @@ const OrderDesc = ({ isUserOrdering }) => {
     const Price = e.target.price.value;
     const description = e.target.description.value;
 
-    dispatch({
-      type: ADD__TO__CART,
-      payload: {
-        id: amOrdering.id,
-        QTY: QTY,
-        name: amOrdering.name,
-        price: Price,
-        description: description,
-      },
-    });
+    const isItemExistIncart = myCart.find((item) => item.id === amOrdering.id);
+
+    try {
+      if (isItemExistIncart) {
+        alert("Item already exist in cart");
+      } else {
+        dispatch({
+          type: ADD__TO__CART,
+          payload: {
+            id: amOrdering.id,
+            QTY: QTY,
+            name: amOrdering.name,
+            price: Price,
+            description: description,
+          },
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
 
     dispatch({ type: CANCEL__ORDER });
   };
