@@ -7,7 +7,11 @@ const Cart = () => {
 
   const cartItem = useSelector((state) => state.cartReducer.cart);
 
-  console.log(cartItem);
+  const TotalCart = cartItem.reduce((acc, curr) => {
+    return curr.QTY * curr.price;
+  }, 0);
+
+  console.log(TotalCart, "Total");
 
   return (
     <div>
@@ -38,11 +42,11 @@ const Cart = () => {
             )}
           </div>
           <div className="Cart__Body">
-            <h4> CART SUMMARY (₦{cartItem.length}000)</h4>
+            <h4> CART SUMMARY ({cartItem.length})</h4>
             <div className="Cart__Summary">
               <div className="Cart__Summary__Grid">
                 <h4> Sub Total</h4>
-                <p> ₦500</p>
+                <p> {TotalCart}</p>
               </div>
               <div className="Cart__Summary__Grid">
                 <h4> Delivery Fee</h4>
@@ -54,7 +58,7 @@ const Cart = () => {
               </div>
               <div className="Cart__Summary__Grid">
                 <h4> Cart Total</h4>
-                <p> ₦900</p>
+                <p> {TotalCart + 300 + 50}</p>
               </div>
               <button className="Cart__payment">Proceed to payment</button>
               <h6>Secure Checkout shipping is always safe and secure.</h6>
