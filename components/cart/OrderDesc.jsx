@@ -13,6 +13,7 @@ const OrderDesc = ({ isUserOrdering }) => {
 
     const QTY = e.target.qty.value;
     const Price = e.target.price.value;
+    const description = e.target.description.value;
 
     dispatch({
       type: ADD__TO__CART,
@@ -21,6 +22,7 @@ const OrderDesc = ({ isUserOrdering }) => {
         QTY: QTY,
         name: amOrdering.name,
         price: Price,
+        description: description,
       },
     });
 
@@ -61,6 +63,17 @@ const OrderDesc = ({ isUserOrdering }) => {
                   defaultValue={amOrdering.price}
                   onChange={(e) => e.target.value}
                   placeholder="Enter amount you want to buy"
+                />
+              </div>
+              <div className="add__description">
+                <p>
+                  <span>*</span> Optional{" "}
+                </p>
+                <input
+                  type="text"
+                  name="description"
+                  onChange={(e) => e.target.value}
+                  placeholder="Enter description e.g 'abeg na soft meat i want' "
                 />
               </div>
               <div className="group__button">

@@ -84,3 +84,26 @@
     }
   }
 }
+
+.add__description {
+  p {
+    text-transform: capitalize;
+    margin-bottom: 0.5em;
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 12px 0.5em;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+}
