@@ -17,8 +17,9 @@ const SingleRestaurant = () => {
 
   const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
 
-  const OrderOptionHandler = () => {
-    dispatch({ type: IS__ORDERING });
+  const OrderOptionHandler = (id) => {
+    const ItemOrder = Menu.find((item) => item.id === id);
+    dispatch({ type: IS__ORDERING, payload: ItemOrder });
   };
 
   return (
@@ -59,29 +60,29 @@ const SingleRestaurant = () => {
             )}
           </div>
         </div>
-        <>
-          <br />
-          <div className="Layout__constraint">
-            <div className="Restaurant__Menu">
-              <h2>Full Menu</h2>
-              <div className="Restaurant__Menu__Grid">
-                {Menu.map((item) => {
-                  return (
-                    <div key={item.id} className="Restaurant__Menu__Grid__Box">
-                      <div>
-                        <h3>{item.name} </h3>
-                        <h4>{`₦${item.price}`}</h4>
-                      </div>
-                      <div>
-                        <button onClick={OrderOptionHandler}>Add</button>
-                      </div>
+        <br />
+        <div className="Layout__constraint">
+          <div className="Restaurant__Menu">
+            <h2>Full Menu</h2>
+            <div className="Restaurant__Menu__Grid">
+              {Menu.map((item) => {
+                return (
+                  <div key={item.id} className="Restaurant__Menu__Grid__Box">
+                    <div>
+                      <h3>{item.name} </h3>
+                      <h4>{`₦${item.price}`}</h4>
                     </div>
-                  );
-                })}
-              </div>
+                    <div>
+                      <button onClick={() => OrderOptionHandler(item.id)}>
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
-        </>
+        </div>
       </div>
       <CartQTY />
       <OrderDesc isUserOrdering={isUserOrdering} />

@@ -2,6 +2,11 @@ import { IS__ORDERING, CANCEL__ORDER, ADD__TO__CART } from "../actions/action";
 
 const InitialState = {
   isOrdering: false,
+  amOrdering: {
+    id: 1,
+    name: "Bread",
+    price: 250,
+  },
   cart: [],
 };
 
@@ -11,6 +16,7 @@ export const cartReducers = (state = InitialState, action) => {
       return {
         ...state,
         isOrdering: true,
+        amOrdering: action.payload,
       };
     case CANCEL__ORDER:
       return {
