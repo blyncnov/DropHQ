@@ -8,11 +8,10 @@ const Cart = () => {
 
   const cartItem = useSelector((state) => state.cartReducer.cart);
 
-  const TotalCart = cartItem.reduce((acc, curr) => {
-    return curr.QTY * curr.price;
+  const TotalCart = cartItem.reduce((cartTotal, cartItem) => {
+    const { price, QTY } = cartItem;
+    return (cartTotal += QTY * price);
   }, 0);
-
-  console.log(TotalCart, "Total");
 
   return (
     <div>
@@ -29,7 +28,6 @@ const Cart = () => {
                   return (
                     <div className="Cart__Section__Container" key={index}>
                       <div className="Cart__Section">
-                        {" "}
                         <h4> {item.name} </h4>
                         <h4> {item.QTY} </h4>
                         <p> ₦{item.price} </p>
