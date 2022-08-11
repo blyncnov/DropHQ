@@ -5,17 +5,10 @@ const Address = () => {
   return (
     <>
       <div>
-        <div className="Login__Container Login__Container__White">
-          <div className="Layout__constraint">
+        <div className=" ">
+          <div className="">
             <div className="Login__Section">
               <div className="Login__Box">
-                <div className="Login__Left__Side">
-                  <Link href="/">
-                    <a>
-                      <h4>Delivery Details</h4>
-                    </a>
-                  </Link>
-                </div>
                 <div className="Login__Right__Side">
                   <div className="Login__Container__Inside">
                     <div>
@@ -65,9 +58,6 @@ const Address = () => {
                               name="address"
                               placeholder="Delivery Address  "
                             />
-                          </div>
-                          <div className="login__input">
-                            <button>COMPLETE ORDER</button>
                           </div>
                         </form>
                       </div>

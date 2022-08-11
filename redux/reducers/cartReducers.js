@@ -28,6 +28,11 @@ export const cartReducers = (state = InitialState, action) => {
         ...state,
         cart: [...state.cart, action.payload],
       };
+    case "CLEAR_CART":
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       return state;
   }

@@ -1,3 +1,29 @@
+.Cart__Make__Order__Container {
+  .group__page__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+
+    button {
+      border: none;
+      background-color: #ff5a5f;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 400;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 10px 24px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #ff5a5f;
+        color: #fff;
+      }
+    }
+  }
+}
+
 .cart__container__body {
   .cart__container {
     position: fixed;
@@ -42,7 +68,7 @@
 
 .Cart__container__Grid__Container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
 
   margin: 1em 0;
 
