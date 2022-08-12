@@ -8,7 +8,7 @@ const Address = () => {
         <div className=" ">
           <div className="">
             <div className="Login__Section">
-              <div className="Login__Box">
+              <div className="Login__Box Login__Box__Transparent">
                 <div className="Login__Right__Side">
                   <div className="Login__Container__Inside">
                     <div>

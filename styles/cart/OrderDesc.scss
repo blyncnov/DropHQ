@@ -46,6 +46,15 @@
     gap: 1em;
     margin: 1em 0;
 
+    p {
+      text-transform: capitalize;
+      margin-bottom: 0.5em;
+
+      span {
+        color: red;
+      }
+    }
+
     input {
       width: 100%;
       border-radius: 3px;

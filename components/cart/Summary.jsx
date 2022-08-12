@@ -4,7 +4,7 @@ const CartSummary = ({ cartItem, TotalCart }) => {
   return (
     <>
       <div className="Cart__Body">
-        <h4> CART SUMMARY ({cartItem.length})</h4>
+        <h4> CART SUMMARY </h4>
         <div className="Cart__Summary">
           <div className="Cart__Summary__Grid">
             <h4> Sub Total</h4>
@@ -26,7 +26,7 @@ const CartSummary = ({ cartItem, TotalCart }) => {
             <h4> Grand Total</h4>
             <p> ₦{TotalCart + 300 + 50 + 150}</p>
           </div>
-          <button className="Cart__payment">Proceed to payment</button>
+          <button className="Cart__payment">Complete Order</button>
           <h6>Secure Checkout shipping is always safe and secure.</h6>
         </div>
       </div>

@@ -61,21 +61,31 @@ const OrderDesc = ({ isUserOrdering }) => {
             <h4>{amOrdering.name} </h4>
             <form onSubmit={AddToCartHandler}>
               <div className="OrderDesc__Order__Amount">
-                <input
-                  type="number"
-                  min="1"
-                  max="1000"
-                  name="qty"
-                  onChange={(e) => e.target.value}
-                  defaultValue={1}
-                />
-                <input
-                  type="number"
-                  name="price"
-                  defaultValue={amOrdering.price}
-                  onChange={(e) => e.target.value}
-                  placeholder="Enter amount you want to buy"
-                />
+                <div>
+                  <p>
+                    <span>*</span> Quantity
+                  </p>
+                  <input
+                    type="number"
+                    min="1"
+                    max="1000"
+                    name="qty"
+                    onChange={(e) => e.target.value}
+                    defaultValue={1}
+                  />
+                </div>
+                <div>
+                  <p>
+                    <span>*</span> Price (₦)
+                  </p>
+                  <input
+                    type="number"
+                    name="price"
+                    defaultValue={amOrdering.price}
+                    onChange={(e) => e.target.value}
+                    placeholder="Enter amount you want to buy"
+                  />
+                </div>
               </div>
               <div className="add__description">
                 <p>
