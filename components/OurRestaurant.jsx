@@ -40,7 +40,7 @@ const OurRestaurants = () => {
                     <p>No reviews yet</p>
                   )}
                   <p>{restaurant.desc}</p>
-                  <Link href={`/restaurants/${Slugify(restaurant.name)}`}>
+                  <Link href={`/restaurants/${restaurant.id}`}>
                     <a>
                       <button className="btn">View Restaurant </button>
                     </a>
