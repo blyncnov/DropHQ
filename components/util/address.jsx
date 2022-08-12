@@ -9,7 +9,7 @@ const Address = () => {
           <div className="">
             <div className="Login__Section">
               <div className="Login__Box Login__Box__Transparent">
-                <div className="Login__Right__Side">
+                <div className="Login__Right__Side Login__Right__Side__Address">
                   <div className="Login__Container__Inside">
                     <div>
                       <div className="login__information">
