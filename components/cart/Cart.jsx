@@ -43,29 +43,33 @@ const Cart = () => {
         <div className="Cart__container__Grid__Container">
           {steps === 1 && (
             <>
-              <h3> Your Order</h3>
-              <br />
-              <div className="Cart__Body">
-                <h4> Cart ({cartItem.length})</h4>
+              <div>
+                <h3> Your Order</h3>
+              </div>
+              <div className="Checkout__Container">
                 <br />
-                {cartItem.length <= 0 ? (
-                  "Your cart is empty!"
-                ) : (
-                  <>
-                    {cartItem.map((item, index) => {
-                      return (
-                        <div className="Cart__Section__Container" key={index}>
-                          <div className="Cart__Section">
-                            <h4> {item.name} </h4>
-                            <h4> {item.QTY} </h4>
-                            <p> ₦{item.price} </p>
+                <div className="Cart__Body">
+                  <h4> Cart ({cartItem.length})</h4>
+                  <br />
+                  {cartItem.length <= 0 ? (
+                    "Your cart is empty!"
+                  ) : (
+                    <>
+                      {cartItem.map((item, index) => {
+                        return (
+                          <div className="Cart__Section__Container" key={index}>
+                            <div className="Cart__Section">
+                              <h4> {item.name} </h4>
+                              <h4> {item.QTY} </h4>
+                              <p> ₦{item.price} </p>
+                            </div>
+                            <h6> {item.description} </h6>
                           </div>
-                          <h6> {item.description} </h6>
-                        </div>
-                      );
-                    })}
-                  </>
-                )}
+                        );
+                      })}
+                    </>
+                  )}
+                </div>
               </div>
             </>
           )}
@@ -77,24 +81,26 @@ const Cart = () => {
           )}
 
           {steps === 3 && (
-            <div className="Cart__Body">
-              <h3> CHECKOUT</h3>
-              <br />
-              {cartItem.map((item, index) => {
-                return (
-                  <div className="Cart__Section__Container" key={index}>
-                    <div className="Cart__Section">
-                      <h4> {item.name} </h4>
-                      <h4> {item.QTY} </h4>
-                      <p> ₦{item.price} </p>
+            <div className="Checkout__Container">
+              <div className="Cart__Body">
+                <h3> CHECKOUT CART</h3>
+                <br />
+                {cartItem.map((item, index) => {
+                  return (
+                    <div className="Cart__Section__Container" key={index}>
+                      <div className="Cart__Section">
+                        <h4> {item.name} </h4>
+                        <h4> {item.QTY} </h4>
+                        <p> ₦{item.price} </p>
+                      </div>
+                      <h6> {item.description} </h6>
                     </div>
-                    <h6> {item.description} </h6>
-                  </div>
-                );
-              })}
-              <br />
-              <br />
-              <CartSummary cartItem={cartItem} TotalCart={TotalCart} />
+                  );
+                })}
+                <br />
+                <br />
+                <CartSummary cartItem={cartItem} TotalCart={TotalCart} />
+              </div>
             </div>
           )}
         </div>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useRouter } from "next/router";
+
 import IS__ORDERING from "../../redux/actions/action";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -7,12 +9,20 @@ import { AiFillStar } from "react-icons/ai";
 
 import CartQTY from "../../components/util/CartQTY";
 import OrderDesc from "../../components/cart/OrderDesc";
-// import Cart from "../../components/cart/Cart";
 
 import Menu from "../../data/menu";
+import Restaurants from "../../data/restaurants";
 
 const SingleRestaurant = () => {
+  const router = useRouter();
   const dispatch = useDispatch();
+
+  const { id } = router.query;
+  const Restaurant__Information = Restaurants.find(
+    (restaurant) => restaurant.id == id
+  );
+
+  // console.log(Restaurant__Information);
 
   const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
 
@@ -28,21 +38,18 @@ const SingleRestaurant = () => {
           <div className="Layout__constraint">
             <div className="Single__Restaurants__Container-Flex">
               <div className="Single__Restaurants__Container-Box-Image-Card">
-                <h1>B</h1>
+                <h1> {Restaurant__Information.name.slice(0, 1)} </h1>
               </div>
             </div>
           </div>
         </div>
         <div className="Layout__constraint">
           <div className="Single__Restaurants__Text">
-            <h1>Boripe Kitchen</h1>
+            <br />
+            <h1> {Restaurant__Information.name} </h1>
             <br />
             <br />
-            <p>
-              Great food makes people think of big family dinners. So you may
-              want to position your restaurant as a place to bring the whole
-              family.
-            </p>
+            <p>{Restaurant__Information.desc}</p>
           </div>
           <div className="About__Text__Description">
             {2 == 2 ? (
@@ -50,7 +57,12 @@ const SingleRestaurant = () => {
                 <div className="Restaurant__Review__Tab">
                   <AiFillStar />
                   <p>
-                    4.2 <span>{4.7 > 4.5 ? "Top Star" : "Very Good"}</span>
+                    4.2{" "}
+                    <span>
+                      {Restaurant__Information.rating > 4.5
+                        ? "Top Star"
+                        : "Very Good"}
+                    </span>
                   </p>
                 </div>
               </div>
