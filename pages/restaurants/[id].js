@@ -32,7 +32,7 @@ const SingleRestaurant = () => {
 
     SetRestaurant__Information(Restaurant__Informationx);
     console.log(Restaurant__Informationx);
-  }, []);
+  }, [IdNumber]);
 
   const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
 
