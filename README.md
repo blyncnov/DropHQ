@@ -1,6 +1,6 @@
 ## Food Ordering Website
 
-This is a Fullstack Application Webapp, created by Taiwo Boluwatife [`Blyncnov`](https://blyncnov.com/).
+This is a Fullstack Web Application , created by Taiwo Boluwatife [`Blyncnov`](https://blyncnov.com/).
 
 ```bash
 welcome to earth
@@ -30,7 +30,7 @@ I started this `Project` by bootraping Next js and then installing scss .. I sta
 
 ## Time Taken
 
-* 1 week
+* July 15 - till date
 
 
 ## Developer Information
