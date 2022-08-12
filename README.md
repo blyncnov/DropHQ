@@ -30,7 +30,7 @@ I started this `Project` by bootraping Next js and then installing scss .. I sta
 
 ## Time Taken
 
-* July 15 - till date
+* July 13 - till date
 
 
 ## Developer Information
