@@ -92,7 +92,8 @@ const Cart = () => {
                   </div>
                 );
               })}
-
+              <br />
+              <br />
               <CartSummary cartItem={cartItem} TotalCart={TotalCart} />
             </div>
           )}
