@@ -4,8 +4,6 @@ import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
 
-import Slugify from "../utils/Slugify";
-
 import Restaurants from "../data/restaurants";
 
 const OurRestaurants = () => {
