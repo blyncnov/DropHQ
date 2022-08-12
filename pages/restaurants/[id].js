@@ -22,13 +22,12 @@ const SingleRestaurant = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
+  const { id } = router.query;
+  const IdNumber = Number.parseInt(id);
+
   useEffect(() => {
-    const { id } = router.query;
-
-    console.log(id);
-
     const Restaurant__Informationx = Restaurants.find(
-      (restaurant) => restaurant.id == id
+      (restaurant) => restaurant.id == IdNumber
     );
 
     SetRestaurant__Information(Restaurant__Informationx);
@@ -46,7 +45,7 @@ const SingleRestaurant = () => {
 
   return (
     <>
-      {Restaurant__Information ? (
+      {Restaurant__Information != null ? (
         <div className="Single__Restaurants__Container">
           <div className="Single__Restaurants__Container-Box">
             <div className="Layout__constraint">

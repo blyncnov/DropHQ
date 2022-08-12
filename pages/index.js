@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>DropHQ Inc.</title>
+        <title>DropHQ Inc. | Blyncnov </title>
         <meta name="DropHQ Inc." content="Created by Blyncnov.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
