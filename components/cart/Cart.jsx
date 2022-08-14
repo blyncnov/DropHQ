@@ -44,13 +44,11 @@ const Cart = () => {
           {steps === 1 && (
             <>
               <div>
-                <h3> Your Order</h3>
+                <h3> Cart ({cartItem.length})</h3>
               </div>
               <div className="Checkout__Container">
                 <br />
                 <div className="Cart__Body">
-                  <h4> Cart ({cartItem.length})</h4>
-                  <br />
                   {cartItem.length <= 0 ? (
                     "Your cart is empty!"
                   ) : (
