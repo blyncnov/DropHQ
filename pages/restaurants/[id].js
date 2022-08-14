@@ -15,6 +15,9 @@ import Restaurants from "../../data/restaurants";
 
 import LoadingGIF from "../../public/assets/gif/loading.gif";
 
+import { BsPhone } from "react-icons/bs";
+import { MdOutlineMenuOpen } from "react-icons/md";
+
 import Image from "next/image";
 
 const SingleRestaurant = () => {
@@ -48,7 +51,7 @@ const SingleRestaurant = () => {
             <div className="Layout__constraint">
               <div className="Single__Restaurants__Container-Flex">
                 <div className="Single__Restaurants__Container-Box-Image-Card">
-                  <h1>B</h1>
+                  <h1>{Restaurant__Information.name?.slice(0,1)}</h1>
                 </div>
               </div>
             </div>
@@ -76,14 +79,17 @@ const SingleRestaurant = () => {
                     </p>
                   </div>
                 </div>
-                
               ) : (
                 <p>No reviews yet</p>
               )}
               <br />
-              <div>
-                <p>{Restaurant__Information.openingHours}</p>
-                <p>{Restaurant__Information.phone}</p>
+              <div className="About__Text__Description__restuarant">
+                <p>
+                  <MdOutlineMenuOpen /> {Restaurant__Information.openingHours}
+                </p>
+                <p>
+                  <BsPhone /> {Restaurant__Information.phone}
+                </p>
               </div>
             </div>
           </div>

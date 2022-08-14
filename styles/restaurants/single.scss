@@ -137,6 +137,12 @@
   }
 }
 
+.About__Text__Description__restuarant {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
 .Loading__Container {
   width: 100%;
   height: 100vh;
