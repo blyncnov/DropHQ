@@ -83,6 +83,10 @@
   padding: 0.5em;
   border-radius: 1px;
 
+  h4 {
+    color: red;
+  }
+
   .Cart__Section__Container {
     h6 {
       font-size: 10px;
@@ -150,6 +154,14 @@
 
 .Checkout__Container {
   padding: 0;
+
+  .Checkout__Sec {
+    padding: 0 1em;
+
+    h3 {
+      color: red;
+    }
+  }
 }
 
 .Delivery_Container {
@@ -158,11 +170,16 @@
   padding: 0.5em;
   border-radius: 4px;
 
+  h3 {
+    color: red;
+  }
+
   .Delivery_Container__Information {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 1em 0;
+    border-top: 1px solid #f3f4f7;
 
     h4 {
       font-size: 1rem;

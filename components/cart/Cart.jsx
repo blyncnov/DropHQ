@@ -83,20 +83,22 @@ const Cart = () => {
           {steps === 3 && (
             <div className="Checkout__Container">
               <div className="Cart__Body">
-                <h3> CHECKOUT CART</h3>
-                <br />
-                {cartItem.map((item, index) => {
-                  return (
-                    <div className="Cart__Section__Container" key={index}>
-                      <div className="Cart__Section">
-                        <h4> {item.name} </h4>
-                        <h4> {item.QTY} </h4>
-                        <p> ₦{item.price} </p>
+                <div className="Checkout__Sec">
+                  <h3> CHECKOUT CART</h3>
+
+                  {cartItem.map((item, index) => {
+                    return (
+                      <div className="Cart__Section__Container" key={index}>
+                        <div className="Cart__Section">
+                          <h4> {item.name} </h4>
+                          <h4> {item.QTY} </h4>
+                          <p> ₦{item.price} </p>
+                        </div>
+                        <h6> {item.description} </h6>
                       </div>
-                      <h6> {item.description} </h6>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
 
                 <div className="Delivery_Container">
                   <h3> DELIVERY INFORMATION</h3>
