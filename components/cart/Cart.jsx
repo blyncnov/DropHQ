@@ -97,8 +97,29 @@ const Cart = () => {
                     </div>
                   );
                 })}
-                <br />
-                <br />
+
+                <div className="Delivery_Container">
+                  <h3> DELIVERY INFORMATION</h3>
+                  <div className="Delivery_Container__Information">
+                    <h4> Full Name </h4>
+                    <p>Taiwo Boluwatife</p>
+                  </div>
+                  <div className="Delivery_Container__Information">
+                    <h4> Phone Number </h4>
+                    <p>08149055068</p>
+                  </div>
+                  <div className="Delivery_Container__Information">
+                    <h4> Location </h4>
+                    <p>Funaab Agbede</p>
+                  </div>
+                  <div className="Delivery_Container__Information">
+                    <h4> Address </h4>
+                    <p>
+                      No 5, kajola street , Igbeba Road , Ijebu ode , Ogun state
+                    </p>
+                  </div>
+                </div>
+
                 <CartSummary cartItem={cartItem} TotalCart={TotalCart} />
               </div>
             </div>

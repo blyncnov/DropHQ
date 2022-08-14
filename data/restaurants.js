@@ -16,7 +16,38 @@ const Restaurants = [
     price: "$$",
     image: ImageTwo,
     rating: 4.5,
-    menu: [],
+    menu: [
+      {
+        id: 1,
+        name: "Bread",
+        price: 250,
+      },
+      {
+        id: 2,
+        name: "Jollof & Rice",
+        price: 100,
+      },
+      {
+        id: 3,
+        name: "Snacks",
+        price: 800,
+      },
+      {
+        id: 4,
+        name: "Table Water",
+        price: 100,
+      },
+      {
+        id: 5,
+        name: "Chivita",
+        price: 400,
+      },
+      {
+        id: 6,
+        name: "Turkey",
+        price: 1500,
+      },
+    ],
     reviews: [
       {
         id: 1,
@@ -49,7 +80,40 @@ const Restaurants = [
     price: "$$",
     image: ImageThree,
     rating: 4.5,
-    menu: [],
+    menu: [
+      {
+        id: 1,
+        name: "Jollof & Rice",
+        price: 100,
+      },
+
+      {
+        id: 2,
+        name: "Table Water",
+        price: 100,
+      },
+      {
+        id: 3,
+        name: "Chivita",
+        price: 400,
+      },
+
+      {
+        id: 4,
+        name: "Egg",
+        price: 100,
+      },
+      {
+        id: 5,
+        name: "Salad",
+        price: 150,
+      },
+      {
+        id: 6,
+        name: "Chicken",
+        price: 1100,
+      },
+    ],
     reviews: [
       {
         id: 1,
@@ -82,7 +146,23 @@ const Restaurants = [
     price: "$$",
     image: ImageFour,
     rating: 4.5,
-    menu: [],
+    menu: [
+      {
+        id: 1,
+        name: "Bread",
+        price: 250,
+      },
+      {
+        id: 2,
+        name: "Jollof & Rice",
+        price: 100,
+      },
+      {
+        id: 3,
+        name: "Snacks",
+        price: 800,
+      },
+    ],
     reviews: [
       {
         id: 1,
@@ -148,7 +228,39 @@ const Restaurants = [
     price: "$$",
     image: ImageTwo,
     rating: 4.5,
-    menu: [],
+    menu: [
+      {
+        id: 1,
+        name: "Bread",
+        price: 250,
+      },
+      {
+        id: 2,
+        name: "Jollof & Rice",
+        price: 100,
+      },
+
+      {
+        id: 2,
+        name: "Turkey",
+        price: 1500,
+      },
+      {
+        id: 3,
+        name: "Egg",
+        price: 100,
+      },
+      {
+        id: 4,
+        name: "Salad",
+        price: 150,
+      },
+      {
+        id: 5,
+        name: "Chicken",
+        price: 1100,
+      },
+    ],
     reviews: [
       {
         id: 1,

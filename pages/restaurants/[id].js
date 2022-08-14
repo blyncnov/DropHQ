@@ -31,12 +31,9 @@ const SingleRestaurant = () => {
     );
 
     SetRestaurant__Information(Restaurant__Informationx);
-    console.log(Restaurant__Informationx);
   }, [IdNumber]);
 
   const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
-
-  console.log("I happen next");
 
   const OrderOptionHandler = (id) => {
     const ItemOrder = Menu.find((item) => item.id === id);
@@ -51,7 +48,7 @@ const SingleRestaurant = () => {
             <div className="Layout__constraint">
               <div className="Single__Restaurants__Container-Flex">
                 <div className="Single__Restaurants__Container-Box-Image-Card">
-                  <h1> B </h1>
+                  <h1>B</h1>
                 </div>
               </div>
             </div>
@@ -65,7 +62,7 @@ const SingleRestaurant = () => {
               <p>{Restaurant__Information.desc}</p>
             </div>
             <div className="About__Text__Description">
-              {2 == 2 ? (
+              {Restaurant__Information.rating > 0 ? (
                 <div>
                   <div className="Restaurant__Review__Tab">
                     <AiFillStar />
@@ -79,9 +76,15 @@ const SingleRestaurant = () => {
                     </p>
                   </div>
                 </div>
+                
               ) : (
                 <p>No reviews yet</p>
               )}
+              <br />
+              <div>
+                <p>{Restaurant__Information.openingHours}</p>
+                <p>{Restaurant__Information.phone}</p>
+              </div>
             </div>
           </div>
           <br />
