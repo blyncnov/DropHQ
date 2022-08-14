@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="Footer__Container">
         <div className="Layout__constraint">
           <div className="Footer__Content">
-            <div className="box">
+            <div className="box" id="locations">
               <h1>DropHQ</h1>
               <p>
                 Great food makes people think of big family dinners. Discover
@@ -25,7 +25,7 @@ const Footer = () => {
                 <li>Become a Rider</li>
               </ul>
             </div>
-            <div className="box">
+            <div className="box" id="contacts">
               <h3>Our Social Media</h3>
               <ul>
                 <li>Facebook</li>

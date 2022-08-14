@@ -12,12 +12,12 @@ export const Navigation__Data = [
   {
     id: 3,
     name: "Locations",
-    link: "/locations",
+    link: "#locations",
   },
   {
     id: 4,
     name: "Contacts",
-    link: "/contacts",
+    link: "#contacts",
   },
 ];
 
