@@ -103,16 +103,6 @@ const Restaurants = [
         name: "Egg",
         price: 100,
       },
-      {
-        id: 5,
-        name: "Salad",
-        price: 150,
-      },
-      {
-        id: 6,
-        name: "Chicken",
-        price: 1100,
-      },
     ],
     reviews: [
       {
@@ -247,22 +237,12 @@ const Restaurants = [
       },
 
       {
-        id: 2,
-        name: "Turkey",
-        price: 1500,
-      },
-      {
         id: 3,
-        name: "Egg",
-        price: 100,
-      },
-      {
-        id: 4,
         name: "Salad",
         price: 150,
       },
       {
-        id: 5,
+        id: 4,
         name: "Chicken",
         price: 1100,
       },
