@@ -1,12 +1,63 @@
 import React from "react";
 import Link from "next/link";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const SignupPageComponent = () => {
+  const registrationHandler = (e) => {
+    e.preventDefault();
+
+    const Name = e.target.name.value;
+    const Address = e.target.address.value;
+    const PhoneNumber = e.target.phoneNumber.value;
+    const Niche = e.target.niche.value;
+    const Email = e.target.email.value;
+    const Password = e.target.password.value;
+
+    console.log(Name, Address, Email, PhoneNumber, Niche, Password);
+
+    axios
+      .post("http://localhost:8080/api/v1/auth/register", {
+        Name,
+        Address,
+        Email,
+        PhoneNumber,
+        Niche,
+        Password,
+      })
+      .then((response) => {
+        console.log(response);
+        toast.success(response.data.message, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.response.data.message, {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
+
   return (
     <div>
+      <ToastContainer />
       <div className="Login__Container">
         <div className="Layout__constraint">
           <div className="Login__Section">
@@ -26,39 +77,85 @@ const SignupPageComponent = () => {
                       <p>Please provide your valid information to Signup .</p>
                     </div>
                     <div className="login__form">
-                      <form>
-                        <div className="login__input">
-                          <label htmlFor="fname">Username :</label>
-                          <br />
-                          <input
-                            type="text"
-                            defaultValue="blyncnov"
-                            name="username"
-                            placeholder="Username"
-                          />
+                      <form onSubmit={registrationHandler}>
+                        <>
+                          <div className="login__input">
+                            <label htmlFor="fname">Restaurant Name</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Restaurant Name"
+                              onChange={(e) => e.target.value}
+                              required
+                            />
+                          </div>
+                          <div className="login__input">
+                            <label htmlFor="fname">Restaurant Address</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="address"
+                              placeholder="Restaurant Address"
+                              onChange={(e) => e.target.value}
+                              required
+                            />
+                          </div>
+                        </>
+                        <div className="group__form">
+                          <div className="login__input">
+                            <label htmlFor="fname">Email Address</label>
+                            <br />
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Email address"
+                              onChange={(e) => e.target.value}
+                              required
+                            />
+                          </div>
+                          <div className="login__input">
+                            <label htmlFor="fname">Phone Number</label>
+                            <br />
+                            <input
+                              type="number"
+                              name="phoneNumber"
+                              placeholder="Phone Number"
+                              onChange={(e) => e.target.value}
+                              required
+                            />
+                          </div>
                         </div>
                         <div className="login__input">
-                          <label htmlFor="fname">Email Address :</label>
+                          <label htmlFor="fname">Restaurant Niche</label>
                           <br />
-                          <input
-                            type="emmail"
-                            name="email"
-                            defaultValue="blyncnov@admin.io"
-                            placeholder="Password"
-                          />
+                          <select
+                            name="niche"
+                            id="niche"
+                            onChange={(e) => e.target.value}
+                            required
+                          >
+                            <option defaultValue="Restaurant">
+                              Restaurant
+                            </option>
+                            <option accessKey="Niche" value="Kitchen">
+                              Kitchen
+                            </option>
+                          </select>
                         </div>
                         <div className="login__input">
-                          <label htmlFor="fname">Password :</label>
+                          <label htmlFor="fname">Password</label>
                           <br />
                           <input
                             type="password"
                             name="password"
-                            defaultValue="hjggfgfgnnjkghn"
                             placeholder="Password"
+                            onChange={(e) => e.target.value}
+                            required
                           />
                         </div>
                         <div className="login__input">
-                          <button>Register</button>
+                          <button type="submit">Register</button>
                         </div>
                       </form>
                       <div className="login__check">

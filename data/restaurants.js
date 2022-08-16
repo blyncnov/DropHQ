@@ -13,7 +13,7 @@ const Restaurants = [
     website: "https://www.mhunis.com/",
     openingHours: "11:00 AM - 11:00 PM",
     cuisine: "Asian",
-    price: "$$",
+    price: "$100",
     image: ImageTwo,
     rating: 4.5,
     menu: [

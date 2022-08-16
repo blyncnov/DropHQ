@@ -1,12 +1,57 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const LoginPageComponents = () => {
+  const router = useRouter();
+
+  const LoginHandler = (e) => {
+    e.preventDefault();
+
+    const Email = e.target.email.value;
+    const Password = e.target.password.value;
+
+    console.log(Email, Password);
+
+    axios
+      .post("http://localhost:8080/api/v1/auth/login", {
+        Email,
+        Password,
+      })
+      .then((response) => {
+        localStorage.setItem("droptoken", response.data.token);
+        toast.success(response.data.message, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        router.push("/");
+      })
+      .catch((err) => {
+        toast.error(err.response.data.message, {
+          position: "bottom-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      });
+  };
   return (
     <div>
+      <ToastContainer />
       <div className="Login__Container">
         <div className="Layout__constraint">
           <div className="Login__Section">
@@ -26,26 +71,28 @@ const LoginPageComponents = () => {
                       <p>Please enter your username and password to login.</p>
                     </div>
                     <div className="Login__Form">
-                      <form>
+                      <form onSubmit={LoginHandler}>
                         <div className="login__input">
-                          <label htmlFor="fname">Username :</label>
+                          <label htmlFor="fname">Email Address</label>
                           <br />
                           <input
-                            type="text"
-                            value="bholuwatife00@gmail.com"
-                            name="username"
-                            placeholder="Username"
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            onChange={(e) => e.target.value}
+                            required
                           />
                         </div>
 
                         <div className="login__input">
-                          <label htmlFor="fname">Password :</label>
+                          <label htmlFor="fname">Password </label>
                           <br />
                           <input
                             type="password"
                             name="password"
-                            value="hjggfgfgnnjkghn"
                             placeholder="Password"
+                            onChange={(e) => e.target.value}
+                            required
                           />
                         </div>
 
@@ -63,11 +110,11 @@ const LoginPageComponents = () => {
                       </div>
                       <div className="login__option">
                         <button className="btn-facebook">
-                          <FaFacebookF /> Login with Facebook
+                          <FaFacebookF /> Login with Facebook..
                         </button>
                         <button className="btn-google">
                           <FcGoogle />
-                          Login with Google
+                          Login with Google x.
                         </button>
                       </div>
                     </div>

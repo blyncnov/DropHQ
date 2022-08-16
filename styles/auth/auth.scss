@@ -112,6 +112,12 @@
 }
 
 form {
+  .group__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
   .login__input {
     margin-bottom: 0.5em;
 

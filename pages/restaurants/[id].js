@@ -51,7 +51,7 @@ const SingleRestaurant = () => {
             <div className="Layout__constraint">
               <div className="Single__Restaurants__Container-Flex">
                 <div className="Single__Restaurants__Container-Box-Image-Card">
-                  <h1>{Restaurant__Information.name?.slice(0,1)}</h1>
+                  <h1>{Restaurant__Information.name?.slice(0, 1)}</h1>
                 </div>
               </div>
             </div>

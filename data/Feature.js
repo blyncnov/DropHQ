@@ -1,7 +1,3 @@
-// import ImageOne from "../public/assets/brand/ScootScoot.svg";
-// import ImageTwo from "../public/assets/brand/Storefront.svg";
-// import ImageThree from "../public/assets/brand/iphone.svg";
-
 import ImageOne from "../public/assets/brand/ScootScoot.svg";
 import ImageTwo from "../public/assets/svg/Shop.svg";
 import ImageThree from "../public/assets/svg/phone.svg";
@@ -14,7 +10,7 @@ export const Features = [
     description:
       "As a delivery driver & dispatcher , you'll make reliable money—working anytime, anywhere.",
     link: "Start making money",
-    url: "access/rider",
+    url: "application/rider",
   },
   {
     id: 2,
