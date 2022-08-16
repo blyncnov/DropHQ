@@ -110,11 +110,11 @@ const LoginPageComponents = () => {
                       </div>
                       <div className="login__option">
                         <button className="btn-facebook">
-                          <FaFacebookF /> Login with Facebook..
+                          <FaFacebookF /> Login with Facebook
                         </button>
                         <button className="btn-google">
                           <FcGoogle />
-                          Login with Google x.
+                          Login with Google 
                         </button>
                       </div>
                     </div>
