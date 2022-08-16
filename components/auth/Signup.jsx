@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -8,6 +9,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const SignupPageComponent = () => {
+  const router = useRouter();
   const registrationHandler = (e) => {
     e.preventDefault();
 
@@ -21,7 +23,7 @@ const SignupPageComponent = () => {
     console.log(Name, Address, Email, PhoneNumber, Niche, Password);
 
     axios
-      .post("http://localhost:8080/api/v1/auth/register", {
+      .post("https://drophq.herokuapp.com/api/v1/auth/register", {
         Name,
         Address,
         Email,
@@ -40,6 +42,7 @@ const SignupPageComponent = () => {
           draggable: true,
           progress: undefined,
         });
+        // router.push("/auth/login");
       })
       .catch((err) => {
         console.log(err);

@@ -20,7 +20,7 @@ const LoginPageComponents = () => {
     console.log(Email, Password);
 
     axios
-      .post("http://localhost:8080/api/v1/auth/login", {
+      .post("https://drophq.herokuapp.com/api/v1/auth/login", {
         Email,
         Password,
       })
@@ -114,7 +114,7 @@ const LoginPageComponents = () => {
                         </button>
                         <button className="btn-google">
                           <FcGoogle />
-                          Login with Google 
+                          Login with Google
                         </button>
                       </div>
                     </div>
