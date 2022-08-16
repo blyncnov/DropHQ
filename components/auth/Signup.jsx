@@ -42,7 +42,9 @@ const SignupPageComponent = () => {
           draggable: true,
           progress: undefined,
         });
-        // router.push("/auth/login");
+        setInterval(() => {
+          router.push("/auth/login");
+        }, 1500);
       })
       .catch((err) => {
         console.log(err);

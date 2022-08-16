@@ -35,7 +35,9 @@ const LoginPageComponents = () => {
           draggable: true,
           progress: undefined,
         });
-        router.push("/");
+        setInterval(() => {
+          router.push("/");
+        }, 1500);
       })
       .catch((err) => {
         toast.error(err.response.data.message, {
