@@ -195,7 +195,13 @@ const Restaurants = [
     price: "$$",
     image: ImageTwo,
     rating: 4.5,
-    menu: [],
+    menu: [
+      {
+        id: 1,
+        name: "Snacks",
+        price: 800,
+      },
+    ],
     reviews: [
       {
         id: 1,

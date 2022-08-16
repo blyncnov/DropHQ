@@ -43,6 +43,9 @@ const SingleRestaurant = () => {
     dispatch({ type: IS__ORDERING, payload: ItemOrder });
   };
 
+  const Restaurant__Menu = Restaurant__Information?.menu;
+  console.log(Restaurant__Menu);
+
   return (
     <>
       {Restaurant__Information != null ? (
@@ -98,7 +101,7 @@ const SingleRestaurant = () => {
             <div className="Restaurant__Menu">
               <h2>Full Menu</h2>
               <div className="Restaurant__Menu__Grid">
-                {Menu.map((item) => {
+                {Restaurant__Menu?.map((item) => {
                   return (
                     <div key={item.id} className="Restaurant__Menu__Grid__Box">
                       <div>

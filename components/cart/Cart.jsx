@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Address from "../util/address";
 import CartSummary from "./Summary";
 
+import { ImCancelCircle } from "react-icons/im";
+
 const Cart = () => {
   const [steps, setSteps] = useState(1);
   const dispatch = useDispatch();
@@ -14,8 +16,6 @@ const Cart = () => {
     const { price, QTY } = cartItem;
     return (cartTotal += QTY * price);
   }, 0);
-
-  console.log(steps);
 
   const OrderHandler = () => {
     if (steps >= 3) {
@@ -31,6 +31,10 @@ const Cart = () => {
     } else {
       setSteps((steps) => steps - 1);
     }
+  };
+
+  const removeItemFromCart = (id) => {
+    dispatch({ type: "REMOVE__ITEM", payload: id });
   };
 
   const ClearCartHandler = () => {
@@ -56,6 +60,15 @@ const Cart = () => {
                       {cartItem.map((item, index) => {
                         return (
                           <div className="Cart__Section__Container" key={index}>
+                            <div className="cancel__btn">
+                              <button
+                                onClick={() => removeItemFromCart(item.id)}
+                              >
+                                <h2>
+                                  <ImCancelCircle />
+                                </h2>
+                              </button>
+                            </div>
                             <div className="Cart__Section">
                               <h4> {item.name} </h4>
                               <h4> {item.QTY} </h4>
