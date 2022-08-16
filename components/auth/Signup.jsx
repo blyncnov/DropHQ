@@ -34,7 +34,7 @@ const SignupPageComponent = () => {
       .then((response) => {
         console.log(response);
         toast.success(response.data.message, {
-          position: "bottom-right",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -42,14 +42,12 @@ const SignupPageComponent = () => {
           draggable: true,
           progress: undefined,
         });
-        setInterval(() => {
-          router.push("/auth/login");
-        }, 1500);
+        // router.push("/auth/login");
       })
       .catch((err) => {
         console.log(err);
         toast.error(err.response.data.message, {
-          position: "bottom-right",
+          position: "top-left",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,

@@ -3,16 +3,17 @@
 
 .Login__Container {
   background: rgb(245, 243, 237);
-  height: 100vh;
+  // height: 100vh;
   background-size: 50%;
   background-position: left;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2em 0;
 
-  @media (max-width: 768px) {
-    height: 100vh;
-  }
+  // @media (max-width: 768px) {
+  //   height: 100vh;
+  // }
 }
 
 .Login__Container__White {

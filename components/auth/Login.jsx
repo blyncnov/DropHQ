@@ -27,7 +27,7 @@ const LoginPageComponents = () => {
       .then((response) => {
         localStorage.setItem("droptoken", response.data.token);
         toast.success(response.data.message, {
-          position: "bottom-right",
+          position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -35,13 +35,11 @@ const LoginPageComponents = () => {
           draggable: true,
           progress: undefined,
         });
-        setInterval(() => {
-          router.push("/");
-        }, 1500);
+        // router.push("/");
       })
       .catch((err) => {
         toast.error(err.response.data.message, {
-          position: "bottom-right",
+          position: "top-left",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
