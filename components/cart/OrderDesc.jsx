@@ -10,8 +10,6 @@ const OrderDesc = ({ isUserOrdering }) => {
   const myCart = useSelector((state) => state.cartReducer.cart);
   const amOrdering = useSelector((state) => state.cartReducer.amOrdering);
 
-  console.log(amOrdering);
-
   const AddToCartHandler = (e) => {
     e.preventDefault();
 
