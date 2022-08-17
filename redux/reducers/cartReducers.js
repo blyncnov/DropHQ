@@ -2,12 +2,14 @@ import { IS__ORDERING, CANCEL__ORDER, ADD__TO__CART } from "../actions/action";
 
 const InitialState = {
   isOrdering: false,
-  amOrdering: {
-    id: 1,
-    name: "Bread",
-    price: 250,
-  },
+  amOrdering: {},
   cart: [],
+  addressInformation: {
+    FullName: "",
+    PhoneNumber: "",
+    Location: "",
+    Address: "",
+  },
 };
 
 export const cartReducers = (state = InitialState, action) => {
@@ -32,6 +34,11 @@ export const cartReducers = (state = InitialState, action) => {
       return {
         ...state,
         cart: [],
+      };
+    case "GET__ADDRESS":
+      return {
+        ...state,
+        addressInformation: action.payload,
       };
     case "REMOVE__ITEM":
       return {

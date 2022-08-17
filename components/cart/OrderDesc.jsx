@@ -10,6 +10,8 @@ const OrderDesc = ({ isUserOrdering }) => {
   const myCart = useSelector((state) => state.cartReducer.cart);
   const amOrdering = useSelector((state) => state.cartReducer.amOrdering);
 
+  console.log(amOrdering);
+
   const AddToCartHandler = (e) => {
     e.preventDefault();
 
@@ -37,7 +39,6 @@ const OrderDesc = ({ isUserOrdering }) => {
     } catch (error) {
       console.log(error);
     }
-
     dispatch({ type: CANCEL__ORDER });
   };
 
@@ -100,7 +101,7 @@ const OrderDesc = ({ isUserOrdering }) => {
               </div>
               <div className="group__button">
                 <button type="submit">Add</button>
-                <button onClick={CancelOrderHandler}>Cancel</button>
+                <div onClick={CancelOrderHandler}>Cancel</div>
               </div>
             </form>
           </div>

@@ -39,12 +39,13 @@ const SingleRestaurant = () => {
   const isUserOrdering = useSelector((state) => state.cartReducer.isOrdering);
 
   const OrderOptionHandler = (id) => {
-    const ItemOrder = Menu.find((item) => item.id === id);
+    const ItemOrder = Restaurant__Information?.menu.find(
+      (item) => item.id === id
+    );
     dispatch({ type: IS__ORDERING, payload: ItemOrder });
   };
 
   const Restaurant__Menu = Restaurant__Information?.menu;
-  console.log(Restaurant__Menu);
 
   return (
     <>

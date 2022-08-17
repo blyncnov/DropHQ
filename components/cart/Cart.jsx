@@ -11,6 +11,9 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const cartItem = useSelector((state) => state.cartReducer.cart);
+  const AddressInformation = useSelector(
+    (state) => state.cartReducer.addressInformation
+  );
 
   const TotalCart = cartItem.reduce((cartTotal, cartItem) => {
     const { price, QTY } = cartItem;
@@ -87,7 +90,7 @@ const Cart = () => {
 
           {steps === 2 && (
             <>
-              <Address />
+              <Address OrderHandlerProps={OrderHandler} />
             </>
           )}
 
@@ -115,21 +118,19 @@ const Cart = () => {
                   <h3> DELIVERY INFORMATION</h3>
                   <div className="Delivery_Container__Information">
                     <h4> Full Name </h4>
-                    <p>Taiwo Boluwatife</p>
+                    <p> {AddressInformation.FullName} </p>
                   </div>
                   <div className="Delivery_Container__Information">
                     <h4> Phone Number </h4>
-                    <p>08149055068</p>
+                    <p>{AddressInformation.PhoneNumber}</p>
                   </div>
                   <div className="Delivery_Container__Information">
                     <h4> Location </h4>
-                    <p>Funaab Agbede</p>
+                    <p>{AddressInformation.Location}</p>
                   </div>
                   <div className="Delivery_Container__Information">
                     <h4> Address </h4>
-                    <p>
-                      No 5, kajola street , Igbeba Road , Ijebu ode , Ogun state
-                    </p>
+                    <p>{AddressInformation.address}</p>
                   </div>
                 </div>
 
@@ -157,7 +158,6 @@ const Cart = () => {
               <button onClick={GoBackHandler} className="prev-btn">
                 Back
               </button>
-              <button onClick={OrderHandler}>Next</button>
             </>
           )}
           {steps === 3 && (
